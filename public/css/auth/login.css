@@ -28,10 +28,10 @@ header{
     font-size: 16px;
     font-weight: normal;
     font-family: 'Inter', sans-serif;
-    color: #9D9D9D;
+    color: #E3CAA5;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid #9D9D9D;
+    border-bottom: 1px solid #E3CAA5;
 }
 
 .lose_pwd{
@@ -48,8 +48,8 @@ header{
 }
 
 .btn-block {
-    background-color: #ADBC9F;
-    border: 1px solid #ADBC9F; /* 테두리와 테두리 색상을 올바르게 지정 */
+    background-color: #E3CAA5;
+    border: 1px solid #E3CAA5; /* 테두리와 테두리 색상을 올바르게 지정 */
     border-radius: 8px; /* 테두리 반경을 지정 */
     width: 575px;
     height: 60px;
