@@ -196,11 +196,11 @@ declare class CodeBuild extends Service {
    */
   getResourcePolicy(callback?: (err: AWSError, data: CodeBuild.Types.GetResourcePolicyOutput) => void): Request<CodeBuild.Types.GetResourcePolicyOutput, AWSError>;
   /**
-   *  Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, or Bitbucket repository. 
+   *  Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository. 
    */
   importSourceCredentials(params: CodeBuild.Types.ImportSourceCredentialsInput, callback?: (err: AWSError, data: CodeBuild.Types.ImportSourceCredentialsOutput) => void): Request<CodeBuild.Types.ImportSourceCredentialsOutput, AWSError>;
   /**
-   *  Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, or Bitbucket repository. 
+   *  Imports the source repository credentials for an CodeBuild project that has its source code stored in a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository. 
    */
   importSourceCredentials(callback?: (err: AWSError, data: CodeBuild.Types.ImportSourceCredentialsOutput) => void): Request<CodeBuild.Types.ImportSourceCredentialsOutput, AWSError>;
   /**
@@ -416,7 +416,7 @@ declare namespace CodeBuild {
   export type ArtifactNamespace = "NONE"|"BUILD_ID"|string;
   export type ArtifactPackaging = "NONE"|"ZIP"|string;
   export type ArtifactsType = "CODEPIPELINE"|"S3"|"NO_ARTIFACTS"|string;
-  export type AuthType = "OAUTH"|"BASIC_AUTH"|"PERSONAL_ACCESS_TOKEN"|"CODECONNECTIONS"|string;
+  export type AuthType = "OAUTH"|"BASIC_AUTH"|"PERSONAL_ACCESS_TOKEN"|"CODECONNECTIONS"|"SECRETS_MANAGER"|string;
   export interface BatchDeleteBuildsInput {
     /**
      * The IDs of the builds to delete.
@@ -1036,7 +1036,7 @@ declare namespace CodeBuild {
      */
     baseCapacity: FleetCapacity;
     /**
-     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
+     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type MAC_ARM is available for Medium fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), and EU (Frankfurt)   The environment type MAC_ARM is available for Large fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
      */
     environmentType: EnvironmentType;
     /**
@@ -1052,6 +1052,10 @@ declare namespace CodeBuild {
      */
     overflowBehavior?: FleetOverflowBehavior;
     vpcConfig?: VpcConfig;
+    /**
+     * The Amazon Machine Image (AMI) of the compute fleet.
+     */
+    imageId?: NonEmptyString;
     /**
      * The service role associated with the compute fleet. For more information, see  Allow a user to add a permission policy for a fleet service role in the CodeBuild User Guide.
      */
@@ -1204,6 +1208,10 @@ declare namespace CodeBuild {
      * If manualCreation is true, CodeBuild doesn't create a webhook in GitHub and instead returns payloadUrl and secret values for the webhook. The payloadUrl and secret values in the output can be used to manually create a webhook within GitHub.   manualCreation is only available for GitHub webhooks. 
      */
     manualCreation?: WrapperBoolean;
+    /**
+     * The scope configuration for global or organization webhooks.  Global or organization webhooks are only available for GitHub and Github Enterprise webhooks. 
+     */
+    scopeConfiguration?: ScopeConfiguration;
   }
   export interface CreateWebhookOutput {
     /**
@@ -1411,7 +1419,7 @@ declare namespace CodeBuild {
     languages?: EnvironmentLanguages;
   }
   export type EnvironmentPlatforms = EnvironmentPlatform[];
-  export type EnvironmentType = "WINDOWS_CONTAINER"|"LINUX_CONTAINER"|"LINUX_GPU_CONTAINER"|"ARM_CONTAINER"|"WINDOWS_SERVER_2019_CONTAINER"|"LINUX_LAMBDA_CONTAINER"|"ARM_LAMBDA_CONTAINER"|string;
+  export type EnvironmentType = "WINDOWS_CONTAINER"|"LINUX_CONTAINER"|"LINUX_GPU_CONTAINER"|"ARM_CONTAINER"|"WINDOWS_SERVER_2019_CONTAINER"|"LINUX_LAMBDA_CONTAINER"|"ARM_LAMBDA_CONTAINER"|"MAC_ARM"|string;
   export interface EnvironmentVariable {
     /**
      * The name or key of the environment variable.
@@ -1472,7 +1480,7 @@ declare namespace CodeBuild {
      */
     baseCapacity?: FleetCapacity;
     /**
-     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
+     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type MAC_ARM is available for Medium fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), and EU (Frankfurt)   The environment type MAC_ARM is available for Large fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
      */
     environmentType?: EnvironmentType;
     /**
@@ -1489,6 +1497,10 @@ declare namespace CodeBuild {
     overflowBehavior?: FleetOverflowBehavior;
     vpcConfig?: VpcConfig;
     /**
+     * The Amazon Machine Image (AMI) of the compute fleet.
+     */
+    imageId?: NonEmptyString;
+    /**
      * The service role associated with the compute fleet. For more information, see  Allow a user to add a permission policy for a fleet service role in the CodeBuild User Guide.
      */
     fleetServiceRole?: NonEmptyString;
@@ -1499,7 +1511,7 @@ declare namespace CodeBuild {
   }
   export type FleetArns = NonEmptyString[];
   export type FleetCapacity = number;
-  export type FleetContextCode = "CREATE_FAILED"|"UPDATE_FAILED"|"ACTION_REQUIRED"|string;
+  export type FleetContextCode = "CREATE_FAILED"|"UPDATE_FAILED"|"ACTION_REQUIRED"|"PENDING_DELETION"|"INSUFFICIENT_CAPACITY"|string;
   export type FleetName = string;
   export type FleetNames = NonEmptyString[];
   export type FleetOverflowBehavior = "QUEUE"|"ON_DEMAND"|string;
@@ -1574,7 +1586,7 @@ declare namespace CodeBuild {
      */
     username?: NonEmptyString;
     /**
-     *  For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access token or the app password. For the authType CODECONNECTIONS, this is the connectionArn.
+     *  For GitHub or GitHub Enterprise, this is the personal access token. For Bitbucket, this is either the access token or the app password. For the authType CODECONNECTIONS, this is the connectionArn. For the authType SECRETS_MANAGER, this is the secretArn.
      */
     token: SensitiveNonEmptyString;
     /**
@@ -1582,7 +1594,7 @@ declare namespace CodeBuild {
      */
     serverType: ServerType;
     /**
-     *  The type of authentication used to connect to a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository. An OAUTH connection is not supported by the API and must be created using the CodeBuild console. Note that CODECONNECTIONS is only valid for GitLab and GitLab Self Managed.
+     *  The type of authentication used to connect to a GitHub, GitHub Enterprise, GitLab, GitLab Self Managed, or Bitbucket repository. An OAUTH connection is not supported by the API and must be created using the CodeBuild console.
      */
     authType: AuthType;
     /**
@@ -2286,7 +2298,7 @@ declare namespace CodeBuild {
      */
     buildspec?: String;
     /**
-     * Information about the authorization settings for CodeBuild to access the source code to be built. This information is for the CodeBuild console's use only. Your code should not get or set this information directly.
+     * Information about the authorization settings for CodeBuild to access the source code to be built.
      */
     auth?: SourceAuth;
     /**
@@ -2603,6 +2615,20 @@ declare namespace CodeBuild {
      */
     desiredCapacity?: FleetCapacity;
   }
+  export interface ScopeConfiguration {
+    /**
+     * The name of either the enterprise or organization that will send webhook events to CodeBuild, depending on if the webhook is a global or organization webhook respectively.
+     */
+    name: String;
+    /**
+     * The domain of the GitHub Enterprise organization. Note that this parameter is only required if your project's source type is GITHUB_ENTERPRISE
+     */
+    domain?: String;
+    /**
+     * The type of scope for a GitHub webhook.
+     */
+    scope: WebhookScopeType;
+  }
   export type SecurityGroupIds = NonEmptyString[];
   export type SensitiveNonEmptyString = string;
   export type SensitiveString = string;
@@ -2611,7 +2637,7 @@ declare namespace CodeBuild {
   export type SortOrderType = "ASCENDING"|"DESCENDING"|string;
   export interface SourceAuth {
     /**
-     * The authorization type to use. Valid options are OAUTH or CODECONNECTIONS.
+     * The authorization type to use. Valid options are OAUTH, CODECONNECTIONS, or SECRETS_MANAGER.
      */
     type: SourceAuthType;
     /**
@@ -2619,7 +2645,7 @@ declare namespace CodeBuild {
      */
     resource?: String;
   }
-  export type SourceAuthType = "OAUTH"|"CODECONNECTIONS"|string;
+  export type SourceAuthType = "OAUTH"|"CODECONNECTIONS"|"SECRETS_MANAGER"|string;
   export interface SourceCredentialsInfo {
     /**
      *  The Amazon Resource Name (ARN) of the token. 
@@ -2630,11 +2656,11 @@ declare namespace CodeBuild {
      */
     serverType?: ServerType;
     /**
-     *  The type of authentication used by the credentials. Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS. 
+     *  The type of authentication used by the credentials. Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, CODECONNECTIONS, or SECRETS_MANAGER. 
      */
     authType?: AuthType;
     /**
-     * The connection ARN if your serverType type is GITLAB or GITLAB_SELF_MANAGED and your authType is CODECONNECTIONS.
+     * The connection ARN if your authType is CODECONNECTIONS or SECRETS_MANAGER.
      */
     resource?: String;
   }
@@ -3025,7 +3051,7 @@ declare namespace CodeBuild {
      */
     baseCapacity?: FleetCapacity;
     /**
-     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
+     * The environment type of the compute fleet.   The environment type ARM_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).   The environment type LINUX_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).   The environment type LINUX_GPU_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), and Asia Pacific (Sydney).   The environment type MAC_ARM is available for Medium fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), and EU (Frankfurt)   The environment type MAC_ARM is available for Large fleets only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and Asia Pacific (Sydney).   The environment type WINDOWS_SERVER_2019_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia Pacific (Mumbai) and EU (Ireland).   The environment type WINDOWS_SERVER_2022_CONTAINER is available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Sydney), Asia Pacific (Singapore), Asia Pacific (Tokyo), South America (São Paulo) and Asia Pacific (Mumbai).   For more information, see Build environment compute types in the CodeBuild user guide.
      */
     environmentType?: EnvironmentType;
     /**
@@ -3041,6 +3067,10 @@ declare namespace CodeBuild {
      */
     overflowBehavior?: FleetOverflowBehavior;
     vpcConfig?: VpcConfig;
+    /**
+     * The Amazon Machine Image (AMI) of the compute fleet.
+     */
+    imageId?: NonEmptyString;
     /**
      * The service role associated with the compute fleet. For more information, see  Allow a user to add a permission policy for a fleet service role in the CodeBuild User Guide.
      */
@@ -3263,11 +3293,15 @@ declare namespace CodeBuild {
      * A timestamp that indicates the last time a repository's secret token was modified. 
      */
     lastModifiedSecret?: Timestamp;
+    /**
+     * The scope configuration for global or organization webhooks.  Global or organization webhooks are only available for GitHub and Github Enterprise webhooks. 
+     */
+    scopeConfiguration?: ScopeConfiguration;
   }
   export type WebhookBuildType = "BUILD"|"BUILD_BATCH"|string;
   export interface WebhookFilter {
     /**
-     *  The type of webhook filter. There are nine webhook filter types: EVENT, ACTOR_ACCOUNT_ID, HEAD_REF, BASE_REF, FILE_PATH, COMMIT_MESSAGE, TAG_NAME, RELEASE_NAME, and WORKFLOW_NAME.     EVENT     A webhook event triggers a build when the provided pattern matches one of nine event types: PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED, PULL_REQUEST_CLOSED, PULL_REQUEST_REOPENED, PULL_REQUEST_MERGED, RELEASED, PRERELEASED, and WORKFLOW_JOB_QUEUED. The EVENT patterns are specified as a comma-separated string. For example, PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED filters all push, pull request created, and pull request updated events.    Types PULL_REQUEST_REOPENED and WORKFLOW_JOB_QUEUED work with GitHub and GitHub Enterprise only. Types RELEASED and PRERELEASED work with GitHub only.      ACTOR_ACCOUNT_ID    A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account ID matches the regular expression pattern.      HEAD_REF    A webhook event triggers a build when the head reference matches the regular expression pattern. For example, refs/heads/branch-name and refs/tags/tag-name.    Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request, Bitbucket push, and Bitbucket pull request events.      BASE_REF    A webhook event triggers a build when the base reference matches the regular expression pattern. For example, refs/heads/branch-name.    Works with pull request events only.       FILE_PATH    A webhook triggers a build when the path of a changed file matches the regular expression pattern.    Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.       COMMIT_MESSAGE   A webhook triggers a build when the head commit message matches the regular expression pattern.   Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.       TAG_NAME   A webhook triggers a build when the tag name of the release matches the regular expression pattern.   Works with RELEASED and PRERELEASED events only.       RELEASE_NAME   A webhook triggers a build when the release name matches the regular expression pattern.   Works with RELEASED and PRERELEASED events only.       WORKFLOW_NAME   A webhook triggers a build when the workflow name matches the regular expression pattern.   Works with WORKFLOW_JOB_QUEUED events only.      
+     *  The type of webhook filter. There are nine webhook filter types: EVENT, ACTOR_ACCOUNT_ID, HEAD_REF, BASE_REF, FILE_PATH, COMMIT_MESSAGE, TAG_NAME, RELEASE_NAME, and WORKFLOW_NAME.     EVENT     A webhook event triggers a build when the provided pattern matches one of nine event types: PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED, PULL_REQUEST_CLOSED, PULL_REQUEST_REOPENED, PULL_REQUEST_MERGED, RELEASED, PRERELEASED, and WORKFLOW_JOB_QUEUED. The EVENT patterns are specified as a comma-separated string. For example, PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED filters all push, pull request created, and pull request updated events.    Types PULL_REQUEST_REOPENED and WORKFLOW_JOB_QUEUED work with GitHub and GitHub Enterprise only. Types RELEASED and PRERELEASED work with GitHub only.      ACTOR_ACCOUNT_ID    A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account ID matches the regular expression pattern.      HEAD_REF    A webhook event triggers a build when the head reference matches the regular expression pattern. For example, refs/heads/branch-name and refs/tags/tag-name.    Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request, Bitbucket push, and Bitbucket pull request events.      BASE_REF    A webhook event triggers a build when the base reference matches the regular expression pattern. For example, refs/heads/branch-name.    Works with pull request events only.       FILE_PATH    A webhook triggers a build when the path of a changed file matches the regular expression pattern.    Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.       COMMIT_MESSAGE   A webhook triggers a build when the head commit message matches the regular expression pattern.   Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.       TAG_NAME   A webhook triggers a build when the tag name of the release matches the regular expression pattern.   Works with RELEASED and PRERELEASED events only.       RELEASE_NAME   A webhook triggers a build when the release name matches the regular expression pattern.   Works with RELEASED and PRERELEASED events only.       REPOSITORY_NAME   A webhook triggers a build when the repository name matches the regular expression pattern.   Works with GitHub global or organization webhooks only.       WORKFLOW_NAME   A webhook triggers a build when the workflow name matches the regular expression pattern.   Works with WORKFLOW_JOB_QUEUED events only.      
      */
     type: WebhookFilterType;
     /**
@@ -3280,6 +3314,7 @@ declare namespace CodeBuild {
     excludeMatchedPattern?: WrapperBoolean;
   }
   export type WebhookFilterType = "EVENT"|"BASE_REF"|"HEAD_REF"|"ACTOR_ACCOUNT_ID"|"FILE_PATH"|"COMMIT_MESSAGE"|"WORKFLOW_NAME"|"TAG_NAME"|"RELEASE_NAME"|string;
+  export type WebhookScopeType = "GITHUB_ORGANIZATION"|"GITHUB_GLOBAL"|string;
   export type WrapperBoolean = boolean;
   export type WrapperDouble = number;
   export type WrapperInt = number;

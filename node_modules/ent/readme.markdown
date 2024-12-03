@@ -2,9 +2,7 @@
 
 Encode and decode HTML entities
 
-[![browser support](http://ci.testling.com/substack/node-ent.png)](http://ci.testling.com/substack/node-ent)
-
-[![build status](https://secure.travis-ci.org/substack/node-ent.png)](http://travis-ci.org/substack/node-ent)
+[![build status](https://secure.travis-ci.org/ljharb/ent.png)](http://travis-ci.org/ljharb/ent)
 
 # example
 
@@ -19,7 +17,7 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 π & ρ
 ```
 
-![ent](http://substack.net/images/ent.png)
+![ent](https://web.archive.org/web/20170823120015if_/http://substack.net/images/ent.png)
 
 # methods
 
@@ -55,8 +53,10 @@ Convert html entities in `str` back to raw text.
 
 # credits
 
-HTML entity tables shamelessly lifted from perl's
-[HTML::Entities](http://cpansearch.perl.org/src/GAAS/HTML-Parser-3.68/lib/HTML/Entities.pm)
+HTML entity tables are from the official
+[`entities.json`](https://html.spec.whatwg.org/entities.json) file for
+the [whatwg HTML
+specification](https://html.spec.whatwg.org/multipage/syntax.html#named-character-references).
 
 # install
 

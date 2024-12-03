@@ -1,17 +1,17 @@
-var punycode = require('punycode');
+'use strict';
+
+var punycode = require('punycode/');
 var revEntities = require('./reversed.json');
 
-module.exports = encode;
-
-function encode (str, opts) {
+module.exports = function encode(str, opts) {
     if (typeof str !== 'string') {
         throw new TypeError('Expected a String');
     }
-    if (!opts) opts = {};
+    if (!opts) { opts = {}; }
 
     var numeric = true;
-    if (opts.named) numeric = false;
-    if (opts.numeric !== undefined) numeric = opts.numeric;
+    if (opts.named) { numeric = false; }
+    if (opts.numeric !== undefined) { numeric = opts.numeric; }
 
     var special = opts.special || {
         '"': true, "'": true,
@@ -23,17 +23,15 @@ function encode (str, opts) {
     var chars = [];
     for (var i = 0; i < codePoints.length; i++) {
         var cc = codePoints[i];
-        var c = punycode.ucs2.encode([ cc ]);
+        var c = punycode.ucs2.encode([cc]);
         var e = revEntities[cc];
         if (e && (cc >= 127 || special[c]) && !numeric) {
-            chars.push('&' + (/;$/.test(e) ? e : e + ';'));
-        }
-        else if (cc < 32 || cc >= 127 || special[c]) {
+            chars.push('&' + ((/;$/).test(e) ? e : e + ';'));
+        } else if (cc < 32 || cc >= 127 || special[c]) {
             chars.push('&#' + cc + ';');
-        }
-        else {
+        } else {
             chars.push(c);
         }
     }
     return chars.join('');
-}
+};

@@ -228,11 +228,11 @@ declare class Connect extends Service {
    */
   createHoursOfOperation(callback?: (err: AWSError, data: Connect.Types.CreateHoursOfOperationResponse) => void): Request<Connect.Types.CreateHoursOfOperationResponse, AWSError>;
   /**
-   * This API is in preview release for Amazon Connect and is subject to change. Initiates an Amazon Connect instance with all the supported channels enabled. It does not attach any storage, such as Amazon Simple Storage Service (Amazon S3) or Amazon Kinesis. It also does not allow for any configurations on features, such as Contact Lens for Amazon Connect.  Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
+   * This API is in preview release for Amazon Connect and is subject to change. Initiates an Amazon Connect instance with all the supported channels enabled. It does not attach any storage, such as Amazon Simple Storage Service (Amazon S3) or Amazon Kinesis. It also does not allow for any configurations on features, such as Contact Lens for Amazon Connect.  For more information, see Create an Amazon Connect instance in the Amazon Connect Administrator Guide. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
    */
   createInstance(params: Connect.Types.CreateInstanceRequest, callback?: (err: AWSError, data: Connect.Types.CreateInstanceResponse) => void): Request<Connect.Types.CreateInstanceResponse, AWSError>;
   /**
-   * This API is in preview release for Amazon Connect and is subject to change. Initiates an Amazon Connect instance with all the supported channels enabled. It does not attach any storage, such as Amazon Simple Storage Service (Amazon S3) or Amazon Kinesis. It also does not allow for any configurations on features, such as Contact Lens for Amazon Connect.  Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
+   * This API is in preview release for Amazon Connect and is subject to change. Initiates an Amazon Connect instance with all the supported channels enabled. It does not attach any storage, such as Amazon Simple Storage Service (Amazon S3) or Amazon Kinesis. It also does not allow for any configurations on features, such as Contact Lens for Amazon Connect.  For more information, see Create an Amazon Connect instance in the Amazon Connect Administrator Guide. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
    */
   createInstance(callback?: (err: AWSError, data: Connect.Types.CreateInstanceResponse) => void): Request<Connect.Types.CreateInstanceResponse, AWSError>;
   /**
@@ -260,11 +260,11 @@ declare class Connect extends Service {
    */
   createPersistentContactAssociation(callback?: (err: AWSError, data: Connect.Types.CreatePersistentContactAssociationResponse) => void): Request<Connect.Types.CreatePersistentContactAssociationResponse, AWSError>;
   /**
-   * Creates a new predefined attribute for the specified Amazon Connect instance.
+   * Creates a new predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   createPredefinedAttribute(params: Connect.Types.CreatePredefinedAttributeRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Creates a new predefined attribute for the specified Amazon Connect instance.
+   * Creates a new predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   createPredefinedAttribute(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -308,11 +308,11 @@ declare class Connect extends Service {
    */
   createRule(callback?: (err: AWSError, data: Connect.Types.CreateRuleResponse) => void): Request<Connect.Types.CreateRuleResponse, AWSError>;
   /**
-   * Creates a security profile.
+   * Creates a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   createSecurityProfile(params: Connect.Types.CreateSecurityProfileRequest, callback?: (err: AWSError, data: Connect.Types.CreateSecurityProfileResponse) => void): Request<Connect.Types.CreateSecurityProfileResponse, AWSError>;
   /**
-   * Creates a security profile.
+   * Creates a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   createSecurityProfile(callback?: (err: AWSError, data: Connect.Types.CreateSecurityProfileResponse) => void): Request<Connect.Types.CreateSecurityProfileResponse, AWSError>;
   /**
@@ -436,11 +436,11 @@ declare class Connect extends Service {
    */
   deleteHoursOfOperation(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * This API is in preview release for Amazon Connect and is subject to change. Deletes the Amazon Connect instance. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
+   * This API is in preview release for Amazon Connect and is subject to change. Deletes the Amazon Connect instance. For more information, see Delete your Amazon Connect instance in the Amazon Connect Administrator Guide. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
    */
   deleteInstance(params: Connect.Types.DeleteInstanceRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * This API is in preview release for Amazon Connect and is subject to change. Deletes the Amazon Connect instance. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
+   * This API is in preview release for Amazon Connect and is subject to change. Deletes the Amazon Connect instance. For more information, see Delete your Amazon Connect instance in the Amazon Connect Administrator Guide. Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances. You must wait 30 days before you can restart creating and deleting instances in your account.
    */
   deleteInstance(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -468,11 +468,11 @@ declare class Connect extends Service {
    */
   deletePrompt(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Deletes a queue.
+   * Deletes a queue. It isn't possible to delete a queue by using the Amazon Connect admin website.
    */
   deleteQueue(params: Connect.Types.DeleteQueueRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Deletes a queue.
+   * Deletes a queue. It isn't possible to delete a queue by using the Amazon Connect admin website.
    */
   deleteQueue(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -580,6 +580,14 @@ declare class Connect extends Service {
    */
   describeAgentStatus(callback?: (err: AWSError, data: Connect.Types.DescribeAgentStatusResponse) => void): Request<Connect.Types.DescribeAgentStatusResponse, AWSError>;
   /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Describes the target authentication profile.
+   */
+  describeAuthenticationProfile(params: Connect.Types.DescribeAuthenticationProfileRequest, callback?: (err: AWSError, data: Connect.Types.DescribeAuthenticationProfileResponse) => void): Request<Connect.Types.DescribeAuthenticationProfileResponse, AWSError>;
+  /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Describes the target authentication profile.
+   */
+  describeAuthenticationProfile(callback?: (err: AWSError, data: Connect.Types.DescribeAuthenticationProfileResponse) => void): Request<Connect.Types.DescribeAuthenticationProfileResponse, AWSError>;
+  /**
    * This API is in preview release for Amazon Connect and is subject to change. Describes the specified contact.   Contact information remains available in Amazon Connect for 24 months, and then it is deleted. Only data from November 12, 2021, and later is returned by this API. 
    */
   describeContact(params: Connect.Types.DescribeContactRequest, callback?: (err: AWSError, data: Connect.Types.DescribeContactResponse) => void): Request<Connect.Types.DescribeContactResponse, AWSError>;
@@ -660,11 +668,11 @@ declare class Connect extends Service {
    */
   describePhoneNumber(callback?: (err: AWSError, data: Connect.Types.DescribePhoneNumberResponse) => void): Request<Connect.Types.DescribePhoneNumberResponse, AWSError>;
   /**
-   * Describes a predefined attribute for the specified Amazon Connect instance.
+   * Describes a predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   describePredefinedAttribute(params: Connect.Types.DescribePredefinedAttributeRequest, callback?: (err: AWSError, data: Connect.Types.DescribePredefinedAttributeResponse) => void): Request<Connect.Types.DescribePredefinedAttributeResponse, AWSError>;
   /**
-   * Describes a predefined attribute for the specified Amazon Connect instance.
+   * Describes a predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   describePredefinedAttribute(callback?: (err: AWSError, data: Connect.Types.DescribePredefinedAttributeResponse) => void): Request<Connect.Types.DescribePredefinedAttributeResponse, AWSError>;
   /**
@@ -708,11 +716,11 @@ declare class Connect extends Service {
    */
   describeRule(callback?: (err: AWSError, data: Connect.Types.DescribeRuleResponse) => void): Request<Connect.Types.DescribeRuleResponse, AWSError>;
   /**
-   * Gets basic information about the security profle.
+   * Gets basic information about the security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   describeSecurityProfile(params: Connect.Types.DescribeSecurityProfileRequest, callback?: (err: AWSError, data: Connect.Types.DescribeSecurityProfileResponse) => void): Request<Connect.Types.DescribeSecurityProfileResponse, AWSError>;
   /**
-   * Gets basic information about the security profle.
+   * Gets basic information about the security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   describeSecurityProfile(callback?: (err: AWSError, data: Connect.Types.DescribeSecurityProfileResponse) => void): Request<Connect.Types.DescribeSecurityProfileResponse, AWSError>;
   /**
@@ -964,11 +972,11 @@ declare class Connect extends Service {
    */
   getTrafficDistribution(callback?: (err: AWSError, data: Connect.Types.GetTrafficDistributionResponse) => void): Request<Connect.Types.GetTrafficDistributionResponse, AWSError>;
   /**
-   * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was created.
+   * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was created.  Call the DescribePhoneNumber API to verify the status of a previous ImportPhoneNumber operation.   If you plan to claim or import numbers and then release numbers frequently, contact us for a service quota exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until up to 180 days past the oldest number released has expired.   By default you can claim or import and then release up to 200% of your maximum number of active phone numbers. If you claim or import and then release phone numbers using the UI or API during a rolling 180 day cycle that exceeds 200% of your phone number service level quota, you will be blocked from claiming or importing any more numbers until 180 days past the oldest number released has expired.  For example, if you already have 99 claimed or imported numbers and a service level quota of 99 phone numbers, and in any 180 day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point you are blocked from claiming any more numbers until you open an Amazon Web Services Support ticket. 
    */
   importPhoneNumber(params: Connect.Types.ImportPhoneNumberRequest, callback?: (err: AWSError, data: Connect.Types.ImportPhoneNumberResponse) => void): Request<Connect.Types.ImportPhoneNumberResponse, AWSError>;
   /**
-   * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was created.
+   * Imports a claimed phone number from an external service, such as Amazon Pinpoint, into an Amazon Connect instance. You can call this API only in the same Amazon Web Services Region where the Amazon Connect instance was created.  Call the DescribePhoneNumber API to verify the status of a previous ImportPhoneNumber operation.   If you plan to claim or import numbers and then release numbers frequently, contact us for a service quota exception. Otherwise, it is possible you will be blocked from claiming and releasing any more numbers until up to 180 days past the oldest number released has expired.   By default you can claim or import and then release up to 200% of your maximum number of active phone numbers. If you claim or import and then release phone numbers using the UI or API during a rolling 180 day cycle that exceeds 200% of your phone number service level quota, you will be blocked from claiming or importing any more numbers until 180 days past the oldest number released has expired.  For example, if you already have 99 claimed or imported numbers and a service level quota of 99 phone numbers, and in any 180 day period you release 99, claim 99, and then release 99, you will have exceeded the 200% limit. At that point you are blocked from claiming any more numbers until you open an Amazon Web Services Support ticket. 
    */
   importPhoneNumber(callback?: (err: AWSError, data: Connect.Types.ImportPhoneNumberResponse) => void): Request<Connect.Types.ImportPhoneNumberResponse, AWSError>;
   /**
@@ -995,6 +1003,14 @@ declare class Connect extends Service {
    * This API is in preview release for Amazon Connect and is subject to change. Returns a paginated list of all approved origins associated with the instance.
    */
   listApprovedOrigins(callback?: (err: AWSError, data: Connect.Types.ListApprovedOriginsResponse) => void): Request<Connect.Types.ListApprovedOriginsResponse, AWSError>;
+  /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+   */
+  listAuthenticationProfiles(params: Connect.Types.ListAuthenticationProfilesRequest, callback?: (err: AWSError, data: Connect.Types.ListAuthenticationProfilesResponse) => void): Request<Connect.Types.ListAuthenticationProfilesResponse, AWSError>;
+  /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Provides summary information about the authentication profiles in a specified Amazon Connect instance.
+   */
+  listAuthenticationProfiles(callback?: (err: AWSError, data: Connect.Types.ListAuthenticationProfilesResponse) => void): Request<Connect.Types.ListAuthenticationProfilesResponse, AWSError>;
   /**
    * This API is in preview release for Amazon Connect and is subject to change. For the specified version of Amazon Lex, returns a paginated list of all the Amazon Lex bots currently associated with the instance. Use this API to returns both Amazon Lex V1 and V2 bots.
    */
@@ -1140,11 +1156,11 @@ declare class Connect extends Service {
    */
   listPhoneNumbersV2(callback?: (err: AWSError, data: Connect.Types.ListPhoneNumbersV2Response) => void): Request<Connect.Types.ListPhoneNumbersV2Response, AWSError>;
   /**
-   * Lists predefined attributes for the specified Amazon Connect instance.
+   * Lists predefined attributes for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   listPredefinedAttributes(params: Connect.Types.ListPredefinedAttributesRequest, callback?: (err: AWSError, data: Connect.Types.ListPredefinedAttributesResponse) => void): Request<Connect.Types.ListPredefinedAttributesResponse, AWSError>;
   /**
-   * Lists predefined attributes for the specified Amazon Connect instance.
+   * Lists predefined attributes for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   listPredefinedAttributes(callback?: (err: AWSError, data: Connect.Types.ListPredefinedAttributesResponse) => void): Request<Connect.Types.ListPredefinedAttributesResponse, AWSError>;
   /**
@@ -1228,19 +1244,19 @@ declare class Connect extends Service {
    */
   listSecurityProfileApplications(callback?: (err: AWSError, data: Connect.Types.ListSecurityProfileApplicationsResponse) => void): Request<Connect.Types.ListSecurityProfileApplicationsResponse, AWSError>;
   /**
-   * Lists the permissions granted to a security profile.
+   * Lists the permissions granted to a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   listSecurityProfilePermissions(params: Connect.Types.ListSecurityProfilePermissionsRequest, callback?: (err: AWSError, data: Connect.Types.ListSecurityProfilePermissionsResponse) => void): Request<Connect.Types.ListSecurityProfilePermissionsResponse, AWSError>;
   /**
-   * Lists the permissions granted to a security profile.
+   * Lists the permissions granted to a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   listSecurityProfilePermissions(callback?: (err: AWSError, data: Connect.Types.ListSecurityProfilePermissionsResponse) => void): Request<Connect.Types.ListSecurityProfilePermissionsResponse, AWSError>;
   /**
-   * Provides summary information about the security profiles for the specified Amazon Connect instance. For more information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide.
+   * Provides summary information about the security profiles for the specified Amazon Connect instance. For more information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   listSecurityProfiles(params: Connect.Types.ListSecurityProfilesRequest, callback?: (err: AWSError, data: Connect.Types.ListSecurityProfilesResponse) => void): Request<Connect.Types.ListSecurityProfilesResponse, AWSError>;
   /**
-   * Provides summary information about the security profiles for the specified Amazon Connect instance. For more information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide.
+   * Provides summary information about the security profiles for the specified Amazon Connect instance. For more information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   listSecurityProfiles(callback?: (err: AWSError, data: Connect.Types.ListSecurityProfilesResponse) => void): Request<Connect.Types.ListSecurityProfilesResponse, AWSError>;
   /**
@@ -1380,6 +1396,14 @@ declare class Connect extends Service {
    */
   resumeContactRecording(callback?: (err: AWSError, data: Connect.Types.ResumeContactRecordingResponse) => void): Request<Connect.Types.ResumeContactRecordingResponse, AWSError>;
   /**
+   * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+   */
+  searchAgentStatuses(params: Connect.Types.SearchAgentStatusesRequest, callback?: (err: AWSError, data: Connect.Types.SearchAgentStatusesResponse) => void): Request<Connect.Types.SearchAgentStatusesResponse, AWSError>;
+  /**
+   * Searches AgentStatuses in an Amazon Connect instance, with optional filtering.
+   */
+  searchAgentStatuses(callback?: (err: AWSError, data: Connect.Types.SearchAgentStatusesResponse) => void): Request<Connect.Types.SearchAgentStatusesResponse, AWSError>;
+  /**
    * Searches for available phone numbers that you can claim to your Amazon Connect instance or traffic distribution group. If the provided TargetArn is a traffic distribution group, you can call this API in both Amazon Web Services Regions associated with the traffic distribution group.
    */
   searchAvailablePhoneNumbers(params: Connect.Types.SearchAvailablePhoneNumbersRequest, callback?: (err: AWSError, data: Connect.Types.SearchAvailablePhoneNumbersResponse) => void): Request<Connect.Types.SearchAvailablePhoneNumbersResponse, AWSError>;
@@ -1420,11 +1444,11 @@ declare class Connect extends Service {
    */
   searchHoursOfOperations(callback?: (err: AWSError, data: Connect.Types.SearchHoursOfOperationsResponse) => void): Request<Connect.Types.SearchHoursOfOperationsResponse, AWSError>;
   /**
-   * Predefined attributes that meet certain criteria.
+   * Searches predefined attributes that meet certain criteria. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   searchPredefinedAttributes(params: Connect.Types.SearchPredefinedAttributesRequest, callback?: (err: AWSError, data: Connect.Types.SearchPredefinedAttributesResponse) => void): Request<Connect.Types.SearchPredefinedAttributesResponse, AWSError>;
   /**
-   * Predefined attributes that meet certain criteria.
+   * Searches predefined attributes that meet certain criteria. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   searchPredefinedAttributes(callback?: (err: AWSError, data: Connect.Types.SearchPredefinedAttributesResponse) => void): Request<Connect.Types.SearchPredefinedAttributesResponse, AWSError>;
   /**
@@ -1468,13 +1492,21 @@ declare class Connect extends Service {
    */
   searchRoutingProfiles(callback?: (err: AWSError, data: Connect.Types.SearchRoutingProfilesResponse) => void): Request<Connect.Types.SearchRoutingProfilesResponse, AWSError>;
   /**
-   * Searches security profiles in an Amazon Connect instance, with optional filtering.
+   * Searches security profiles in an Amazon Connect instance, with optional filtering. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   searchSecurityProfiles(params: Connect.Types.SearchSecurityProfilesRequest, callback?: (err: AWSError, data: Connect.Types.SearchSecurityProfilesResponse) => void): Request<Connect.Types.SearchSecurityProfilesResponse, AWSError>;
   /**
-   * Searches security profiles in an Amazon Connect instance, with optional filtering.
+   * Searches security profiles in an Amazon Connect instance, with optional filtering. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   searchSecurityProfiles(callback?: (err: AWSError, data: Connect.Types.SearchSecurityProfilesResponse) => void): Request<Connect.Types.SearchSecurityProfilesResponse, AWSError>;
+  /**
+   * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.  The UserHierarchyGroup with "LevelId": "0" is the foundation for building levels on top of an instance. It is not user-definable, nor is it visible in the UI. 
+   */
+  searchUserHierarchyGroups(params: Connect.Types.SearchUserHierarchyGroupsRequest, callback?: (err: AWSError, data: Connect.Types.SearchUserHierarchyGroupsResponse) => void): Request<Connect.Types.SearchUserHierarchyGroupsResponse, AWSError>;
+  /**
+   * Searches UserHierarchyGroups in an Amazon Connect instance, with optional filtering.  The UserHierarchyGroup with "LevelId": "0" is the foundation for building levels on top of an instance. It is not user-definable, nor is it visible in the UI. 
+   */
+  searchUserHierarchyGroups(callback?: (err: AWSError, data: Connect.Types.SearchUserHierarchyGroupsResponse) => void): Request<Connect.Types.SearchUserHierarchyGroupsResponse, AWSError>;
   /**
    * Searches users in an Amazon Connect instance, with optional filtering.    AfterContactWorkTimeLimit is returned in milliseconds.  
    */
@@ -1500,19 +1532,19 @@ declare class Connect extends Service {
    */
   sendChatIntegrationEvent(callback?: (err: AWSError, data: Connect.Types.SendChatIntegrationEventResponse) => void): Request<Connect.Types.SendChatIntegrationEventResponse, AWSError>;
   /**
-   * Provides a pre-signed Amazon S3 URL in response for uploading your content.  You may only use this API to upload attachments to a Connect Case. 
+   * Provides a pre-signed Amazon S3 URL in response for uploading your content.  You may only use this API to upload attachments to an Amazon Connect Case. 
    */
   startAttachedFileUpload(params: Connect.Types.StartAttachedFileUploadRequest, callback?: (err: AWSError, data: Connect.Types.StartAttachedFileUploadResponse) => void): Request<Connect.Types.StartAttachedFileUploadResponse, AWSError>;
   /**
-   * Provides a pre-signed Amazon S3 URL in response for uploading your content.  You may only use this API to upload attachments to a Connect Case. 
+   * Provides a pre-signed Amazon S3 URL in response for uploading your content.  You may only use this API to upload attachments to an Amazon Connect Case. 
    */
   startAttachedFileUpload(callback?: (err: AWSError, data: Connect.Types.StartAttachedFileUploadResponse) => void): Request<Connect.Types.StartAttachedFileUploadResponse, AWSError>;
   /**
-   * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain credentials from the CreateParticipantConnection API in the Amazon Connect Participant Service. When a new chat contact is successfully created, clients must subscribe to the participant’s connection for the created chat within 5 minutes. This is achieved by invoking CreateParticipantConnection with WEBSOCKET and CONNECTION_CREDENTIALS.  A 429 error occurs in the following situations:   API rate limit is exceeded. API TPS throttling returns a TooManyRequests exception.   The quota for concurrent active chats is exceeded. Active chat throttling returns a LimitExceededException.   If you use the ChatDurationInMinutes parameter and receive a 400 error, your account may not support the ability to configure custom chat durations. For more information, contact Amazon Web Services Support.  For more information about chat, see Chat in the Amazon Connect Administrator Guide.
+   * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain credentials from the CreateParticipantConnection API in the Amazon Connect Participant Service. When a new chat contact is successfully created, clients must subscribe to the participant’s connection for the created chat within 5 minutes. This is achieved by invoking CreateParticipantConnection with WEBSOCKET and CONNECTION_CREDENTIALS.  A 429 error occurs in the following situations:   API rate limit is exceeded. API TPS throttling returns a TooManyRequests exception.   The quota for concurrent active chats is exceeded. Active chat throttling returns a LimitExceededException.   If you use the ChatDurationInMinutes parameter and receive a 400 error, your account may not support the ability to configure custom chat durations. For more information, contact Amazon Web Services Support.  For more information about chat, see the following topics in the Amazon Connect Administrator Guide:     Concepts: Web and mobile messaging capabilities in Amazon Connect     Amazon Connect Chat security best practices   
    */
   startChatContact(params: Connect.Types.StartChatContactRequest, callback?: (err: AWSError, data: Connect.Types.StartChatContactResponse) => void): Request<Connect.Types.StartChatContactResponse, AWSError>;
   /**
-   * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain credentials from the CreateParticipantConnection API in the Amazon Connect Participant Service. When a new chat contact is successfully created, clients must subscribe to the participant’s connection for the created chat within 5 minutes. This is achieved by invoking CreateParticipantConnection with WEBSOCKET and CONNECTION_CREDENTIALS.  A 429 error occurs in the following situations:   API rate limit is exceeded. API TPS throttling returns a TooManyRequests exception.   The quota for concurrent active chats is exceeded. Active chat throttling returns a LimitExceededException.   If you use the ChatDurationInMinutes parameter and receive a 400 error, your account may not support the ability to configure custom chat durations. For more information, contact Amazon Web Services Support.  For more information about chat, see Chat in the Amazon Connect Administrator Guide.
+   * Initiates a flow to start a new chat for the customer. Response of this API provides a token required to obtain credentials from the CreateParticipantConnection API in the Amazon Connect Participant Service. When a new chat contact is successfully created, clients must subscribe to the participant’s connection for the created chat within 5 minutes. This is achieved by invoking CreateParticipantConnection with WEBSOCKET and CONNECTION_CREDENTIALS.  A 429 error occurs in the following situations:   API rate limit is exceeded. API TPS throttling returns a TooManyRequests exception.   The quota for concurrent active chats is exceeded. Active chat throttling returns a LimitExceededException.   If you use the ChatDurationInMinutes parameter and receive a 400 error, your account may not support the ability to configure custom chat durations. For more information, contact Amazon Web Services Support.  For more information about chat, see the following topics in the Amazon Connect Administrator Guide:     Concepts: Web and mobile messaging capabilities in Amazon Connect     Amazon Connect Chat security best practices   
    */
   startChatContact(callback?: (err: AWSError, data: Connect.Types.StartChatContactResponse) => void): Request<Connect.Types.StartChatContactResponse, AWSError>;
   /**
@@ -1532,11 +1564,11 @@ declare class Connect extends Service {
    */
   startContactRecording(callback?: (err: AWSError, data: Connect.Types.StartContactRecordingResponse) => void): Request<Connect.Types.StartContactRecordingResponse, AWSError>;
   /**
-   *  Initiates real-time message streaming for a new chat contact.  For more information about message streaming, see Enable real-time chat message streaming in the Amazon Connect Administrator Guide.
+   *  Initiates real-time message streaming for a new chat contact.  For more information about message streaming, see Enable real-time chat message streaming in the Amazon Connect Administrator Guide. For more information about chat, see the following topics in the Amazon Connect Administrator Guide:     Concepts: Web and mobile messaging capabilities in Amazon Connect     Amazon Connect Chat security best practices   
    */
   startContactStreaming(params: Connect.Types.StartContactStreamingRequest, callback?: (err: AWSError, data: Connect.Types.StartContactStreamingResponse) => void): Request<Connect.Types.StartContactStreamingResponse, AWSError>;
   /**
-   *  Initiates real-time message streaming for a new chat contact.  For more information about message streaming, see Enable real-time chat message streaming in the Amazon Connect Administrator Guide.
+   *  Initiates real-time message streaming for a new chat contact.  For more information about message streaming, see Enable real-time chat message streaming in the Amazon Connect Administrator Guide. For more information about chat, see the following topics in the Amazon Connect Administrator Guide:     Concepts: Web and mobile messaging capabilities in Amazon Connect     Amazon Connect Chat security best practices   
    */
   startContactStreaming(callback?: (err: AWSError, data: Connect.Types.StartContactStreamingResponse) => void): Request<Connect.Types.StartContactStreamingResponse, AWSError>;
   /**
@@ -1651,6 +1683,14 @@ declare class Connect extends Service {
    * This API is in preview release for Amazon Connect and is subject to change. Updates agent status.
    */
   updateAgentStatus(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
+  /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Updates the selected authentication profile.
+   */
+  updateAuthenticationProfile(params: Connect.Types.UpdateAuthenticationProfileRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
+  /**
+   * This API is in preview release for Amazon Connect and is subject to change. To request access to this API, contact Amazon Web Services Support. Updates the selected authentication profile.
+   */
+  updateAuthenticationProfile(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
    * This API is in preview release for Amazon Connect and is subject to change. Adds or updates user-defined contact information associated with the specified contact. At least one field to be updated must be present in the request.  You can add or update user-defined contact information for both ongoing and completed contacts. 
    */
@@ -1788,11 +1828,11 @@ declare class Connect extends Service {
    */
   updatePhoneNumberMetadata(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Updates a predefined attribute for the specified Amazon Connect instance.
+   * Updates a predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   updatePredefinedAttribute(params: Connect.Types.UpdatePredefinedAttributeRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Updates a predefined attribute for the specified Amazon Connect instance.
+   * Updates a predefined attribute for the specified Amazon Connect instance. Predefined attributes are attributes in an Amazon Connect instance that can be used to route contacts to an agent or pools of agents within a queue. For more information, see Create predefined attributes for routing contacts to agents.
    */
   updatePredefinedAttribute(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -1908,11 +1948,11 @@ declare class Connect extends Service {
    */
   updateRule(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Updates a security profile.
+   * Updates a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   updateSecurityProfile(params: Connect.Types.UpdateSecurityProfileRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Updates a security profile.
+   * Updates a security profile. For information about security profiles, see Security Profiles in the Amazon Connect Administrator Guide. For a mapping of the API name and user interface name of the security profile permissions, see List of security profile permissions. 
    */
   updateSecurityProfile(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -2015,6 +2055,7 @@ declare class Connect extends Service {
 declare namespace Connect {
   export type ARN = string;
   export type AWSAccountId = string;
+  export type AccessTokenDuration = number;
   export type ActionSummaries = ActionSummary[];
   export interface ActionSummary {
     /**
@@ -2116,6 +2157,8 @@ declare namespace Connect {
      */
     L5Ids?: HierarchyGroupIdList;
   }
+  export type AgentId = string;
+  export type AgentIds = AgentId[];
   export interface AgentInfo {
     /**
      * The identifier of the agent who accepted the contact.
@@ -2193,6 +2236,7 @@ declare namespace Connect {
   }
   export type AgentStatusDescription = string;
   export type AgentStatusId = string;
+  export type AgentStatusList = AgentStatus[];
   export type AgentStatusName = string;
   export type AgentStatusOrderNumber = number;
   export interface AgentStatusReference {
@@ -2208,6 +2252,27 @@ declare namespace Connect {
      * The name of the agent status.
      */
     StatusName?: AgentStatusName;
+  }
+  export type AgentStatusSearchConditionList = AgentStatusSearchCriteria[];
+  export interface AgentStatusSearchCriteria {
+    /**
+     * A list of conditions which would be applied together with an OR condition.
+     */
+    OrConditions?: AgentStatusSearchConditionList;
+    /**
+     * A leaf node condition which can be used to specify a string condition.  The currently supported values for FieldName are name,&#x2028;&#x2028; description, state, type, displayOrder,&#x2028; and resourceID. 
+     */
+    AndConditions?: AgentStatusSearchConditionList;
+    /**
+     * A leaf node condition which can be used to specify a string condition.  The currently supported values for FieldName are name,&#x2028;&#x2028; description, state, type, displayOrder,&#x2028; and resourceID. 
+     */
+    StringCondition?: StringCondition;
+  }
+  export interface AgentStatusSearchFilter {
+    /**
+     * An object that can be used to specify Tag conditions inside the SearchFilter. This accepts an OR of AND (List of List) input where:    The top level list specifies conditions that need to be applied with OR operator.   The inner list specifies conditions that need to be applied with AND operator.  
+     */
+    AttributeFilter?: ControlPlaneAttributeFilter;
   }
   export type AgentStatusState = "ENABLED"|"DISABLED"|string;
   export interface AgentStatusSummary {
@@ -2240,6 +2305,12 @@ declare namespace Connect {
   export type AgentStatusType = "ROUTABLE"|"CUSTOM"|"OFFLINE"|string;
   export type AgentStatusTypes = AgentStatusType[];
   export type AgentUsername = string;
+  export interface AgentsCriteria {
+    /**
+     * An object to specify a list of agents, by user ID.
+     */
+    AgentIds?: AgentIds;
+  }
   export type AgentsMinOneMaxHundred = UserId[];
   export type AliasArn = string;
   export type AllowedAccessControlTags = {[key: string]: SecurityProfilePolicyValue};
@@ -2478,7 +2549,7 @@ declare namespace Connect {
      */
     InstanceId: InstanceId;
     /**
-     * A valid security key in PEM format.
+     * A valid security key in PEM format as a String.
      */
     Key: PEM;
   }
@@ -2633,7 +2704,11 @@ declare namespace Connect {
     /**
      * The proficiency level of the condition.
      */
-    ProficiencyLevel?: ProficiencyLevel;
+    ProficiencyLevel?: NullableProficiencyLevel;
+    /**
+     * An object to define AgentsCriteria.
+     */
+    MatchCriteria?: MatchCriteria;
     /**
      * The operator of the condition.
      */
@@ -2661,6 +2736,86 @@ declare namespace Connect {
     PotentialQualityIssues?: PotentialAudioQualityIssues;
   }
   export type AudioQualityScore = number;
+  export interface AuthenticationProfile {
+    /**
+     * A unique identifier for the authentication profile. 
+     */
+    Id?: AuthenticationProfileId;
+    /**
+     * The Amazon Resource Name (ARN) for the authentication profile.
+     */
+    Arn?: ARN;
+    /**
+     * The name for the authentication profile.
+     */
+    Name?: AuthenticationProfileName;
+    /**
+     * The description for the authentication profile.
+     */
+    Description?: AuthenticationProfileDescription;
+    /**
+     * A list of IP address range strings that are allowed to access the Amazon Connect instance. For more information about how to configure IP addresses, see Configure IP address based access control in the Amazon Connect Administrator Guide.
+     */
+    AllowedIps?: IpCidrList;
+    /**
+     * A list of IP address range strings that are blocked from accessing the Amazon Connect instance. For more information about how to configure IP addresses, see Configure IP address based access control in the Amazon Connect Administrator Guide.
+     */
+    BlockedIps?: IpCidrList;
+    /**
+     * Shows whether the authentication profile is the default authentication profile for the Amazon Connect instance. The default authentication profile applies to all agents in an Amazon Connect instance, unless overridden by another authentication profile.
+     */
+    IsDefault?: Boolean;
+    /**
+     * The timestamp when the authentication profile was created.
+     */
+    CreatedTime?: Timestamp;
+    /**
+     * The timestamp when the authentication profile was last modified.
+     */
+    LastModifiedTime?: Timestamp;
+    /**
+     * The Amazon Web Services Region where the authentication profile was last modified.
+     */
+    LastModifiedRegion?: RegionName;
+    /**
+     * The short lived session duration configuration for users logged in to Amazon Connect, in minutes. This value determines the maximum possible time before an agent is authenticated. For more information, see Configure the session duration in the Amazon Connect Administrator Guide.
+     */
+    PeriodicSessionDuration?: AccessTokenDuration;
+    /**
+     * The long lived session duration for users logged in to Amazon Connect, in minutes. After this time period, users must log in again. For more information, see Configure the session duration in the Amazon Connect Administrator Guide.
+     */
+    MaxSessionDuration?: RefreshTokenDuration;
+  }
+  export type AuthenticationProfileDescription = string;
+  export type AuthenticationProfileId = string;
+  export type AuthenticationProfileName = string;
+  export interface AuthenticationProfileSummary {
+    /**
+     * The unique identifier of the authentication profile.
+     */
+    Id?: AuthenticationProfileId;
+    /**
+     * The Amazon Resource Name (ARN) of the authentication profile summary.
+     */
+    Arn?: ARN;
+    /**
+     * The name of the authentication profile summary.
+     */
+    Name?: AuthenticationProfileName;
+    /**
+     * Shows whether the authentication profile is the default authentication profile for the Amazon Connect instance. The default authentication profile applies to all agents in an Amazon Connect instance, unless overridden by another authentication profile.
+     */
+    IsDefault?: Boolean;
+    /**
+     * The timestamp when the authentication profile summary was last modified.
+     */
+    LastModifiedTime?: Timestamp;
+    /**
+     * The Amazon Web Services Region when the authentication profile summary was last modified.
+     */
+    LastModifiedRegion?: RegionName;
+  }
+  export type AuthenticationProfileSummaryList = AuthenticationProfileSummary[];
   export type AutoAccept = boolean;
   export interface AvailableNumberSummary {
     /**
@@ -2934,12 +3089,19 @@ declare namespace Connect {
     SourcePhoneNumberArn?: ARN;
   }
   export type ClientToken = string;
+  export interface CommonAttributeAndCondition {
+    /**
+     * A leaf node condition which can be used to specify a tag condition.
+     */
+    TagConditions?: TagAndConditionList;
+  }
+  export type CommonAttributeOrConditionList = CommonAttributeAndCondition[];
   export type CommonNameLength127 = string;
   export type Comparison = "LT"|string;
   export type ComparisonOperator = string;
   export interface CompleteAttachedFileUploadRequest {
     /**
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      */
     InstanceId: InstanceId;
     /**
@@ -2954,6 +3116,17 @@ declare namespace Connect {
   export interface CompleteAttachedFileUploadResponse {
   }
   export type Concurrency = number;
+  export interface Condition {
+    /**
+     * A leaf node condition which can be used to specify a string condition.  The currently supported values for FieldName are name and&#x2028; value. 
+     */
+    StringCondition?: StringCondition;
+    /**
+     * A leaf node condition which can be used to specify a numeric condition.
+     */
+    NumberCondition?: NumberCondition;
+  }
+  export type Conditions = Condition[];
   export interface ConnectionData {
     /**
      * The attendee information, including attendee ID and join token.
@@ -3384,6 +3557,17 @@ declare namespace Connect {
   export type Contacts = ContactSearchSummary[];
   export type Content = string;
   export type ContentType = string;
+  export interface ControlPlaneAttributeFilter {
+    /**
+     * A list of conditions which would be applied together with an OR condition.
+     */
+    OrConditions?: CommonAttributeOrConditionList;
+    /**
+     * A list of conditions which would be applied together with an AND condition.
+     */
+    AndCondition?: CommonAttributeAndCondition;
+    TagCondition?: TagCondition;
+  }
   export interface ControlPlaneTagFilter {
     /**
      * A list of conditions which would be applied together with an OR condition. 
@@ -4728,6 +4912,22 @@ declare namespace Connect {
      */
     AgentStatus?: AgentStatus;
   }
+  export interface DescribeAuthenticationProfileRequest {
+    /**
+     * A unique identifier for the authentication profile. 
+     */
+    AuthenticationProfileId: AuthenticationProfileId;
+    /**
+     * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.
+     */
+    InstanceId: InstanceId;
+  }
+  export interface DescribeAuthenticationProfileResponse {
+    /**
+     * The authentication profile object being described.
+     */
+    AuthenticationProfile?: AuthenticationProfile;
+  }
   export interface DescribeContactEvaluationRequest {
     /**
      * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.
@@ -4859,6 +5059,10 @@ declare namespace Connect {
      * The name of the instance.
      */
     Instance?: Instance;
+    /**
+     * Status information about the replication process. This field is included only when you are using the ReplicateInstance API to replicate an Amazon Connect instance across Amazon Web Services Regions. For information about replicating Amazon Connect instances, see Create a replica of your existing Amazon Connect instance in the Amazon Connect Administrator Guide.
+     */
+    ReplicationConfiguration?: ReplicationConfiguration;
   }
   export interface DescribeInstanceStorageConfigRequest {
     /**
@@ -5992,7 +6196,7 @@ declare namespace Connect {
      */
     BooleanValue?: Boolean;
     /**
-     * a Double number value type.
+     * A Double number value type.
      */
     DoubleValue?: Double;
     /**
@@ -6333,15 +6537,15 @@ declare namespace Connect {
      */
     Interval?: IntervalDetails;
     /**
-     * The filters to apply to returned metrics. You can filter on the following resources:   Agents   Channels   Feature   Queues   Routing profiles   Routing step expression   User hierarchy groups   At least one filter must be passed from queues, routing profiles, agents, or user hierarchy groups. To filter by phone number, see Create a historical metrics report in the Amazon Connect Administrator Guide. Note the following limits:    Filter keys: A maximum of 5 filter keys are supported in a single request. Valid filter keys: AGENT | AGENT_HIERARCHY_LEVEL_ONE | AGENT_HIERARCHY_LEVEL_TWO | AGENT_HIERARCHY_LEVEL_THREE | AGENT_HIERARCHY_LEVEL_FOUR | AGENT_HIERARCHY_LEVEL_FIVE | CASE_TEMPLATE_ARN | CASE_STATUS | CHANNEL | contact/segmentAttributes/connect:Subtype | FEATURE | FLOW_TYPE | FLOWS_NEXT_RESOURCE_ID | FLOWS_NEXT_RESOURCE_QUEUE_ID | FLOWS_OUTCOME_TYPE | FLOWS_RESOURCE_ID | INITIATION_METHOD | RESOURCE_PUBLISHED_TIMESTAMP | ROUTING_PROFILE | ROUTING_STEP_EXPRESSION | QUEUE | Q_CONNECT_ENABLED |     Filter values: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are valid filterValue for the CHANNEL filter key. They do not count towards limitation of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of 100 filter values, along with 3 channel filters.   contact_lens_conversational_analytics is a valid filterValue for the FEATURE filter key. It is available only to contacts analyzed by Contact Lens conversational analytics.  connect:Chat, connect:SMS, connect:Telephony, and connect:WebRTC are valid filterValue examples (not exhaustive) for the contact/segmentAttributes/connect:Subtype filter key.  ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length. This filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be kept as is.  Q_CONNECT_ENABLED. TRUE and FALSE are the only valid filterValues for the Q_CONNECT_ENABLED filter key.    TRUE includes all contacts that had Amazon Q in Connect enabled as part of the flow.   FALSE includes all contacts that did not have Amazon Q in Connect enabled as part of the flow   This filter is available only for contact record-driven metrics.   
+     * The filters to apply to returned metrics. You can filter on the following resources:   Agents   Campaigns   Channels   Feature   Queues   Routing profiles   Routing step expression   User hierarchy groups   At least one filter must be passed from queues, routing profiles, agents, or user hierarchy groups. For metrics for outbound campaigns analytics, you can also use campaigns to satisfy at least one filter requirement. To filter by phone number, see Create a historical metrics report in the Amazon Connect Administrator Guide. Note the following limits:    Filter keys: A maximum of 5 filter keys are supported in a single request. Valid filter keys: AGENT | AGENT_HIERARCHY_LEVEL_ONE | AGENT_HIERARCHY_LEVEL_TWO | AGENT_HIERARCHY_LEVEL_THREE | AGENT_HIERARCHY_LEVEL_FOUR | AGENT_HIERARCHY_LEVEL_FIVE | ANSWERING_MACHINE_DETECTION_STATUS | CAMPAIGN | CASE_TEMPLATE_ARN | CASE_STATUS | CHANNEL | contact/segmentAttributes/connect:Subtype | DISCONNECT_REASON | FEATURE | FLOW_TYPE | FLOWS_NEXT_RESOURCE_ID | FLOWS_NEXT_RESOURCE_QUEUE_ID | FLOWS_OUTCOME_TYPE | FLOWS_RESOURCE_ID | INITIATION_METHOD | RESOURCE_PUBLISHED_TIMESTAMP | ROUTING_PROFILE | ROUTING_STEP_EXPRESSION | QUEUE | Q_CONNECT_ENABLED |     Filter values: A maximum of 100 filter values are supported in a single request. VOICE, CHAT, and TASK are valid filterValue for the CHANNEL filter key. They do not count towards limitation of 100 filter values. For example, a GetMetricDataV2 request can filter by 50 queues, 35 agents, and 15 routing profiles for a total of 100 filter values, along with 3 channel filters.   contact_lens_conversational_analytics is a valid filterValue for the FEATURE filter key. It is available only to contacts analyzed by Contact Lens conversational analytics.  connect:Chat, connect:SMS, connect:Telephony, and connect:WebRTC are valid filterValue examples (not exhaustive) for the contact/segmentAttributes/connect:Subtype filter key.  ROUTING_STEP_EXPRESSION is a valid filter key with a filter value up to 3000 length. This filter is case and order sensitive. JSON string fields must be sorted in ascending order and JSON array order should be kept as is.  Q_CONNECT_ENABLED. TRUE and FALSE are the only valid filterValues for the Q_CONNECT_ENABLED filter key.    TRUE includes all contacts that had Amazon Q in Connect enabled as part of the flow.   FALSE includes all contacts that did not have Amazon Q in Connect enabled as part of the flow   This filter is available only for contact record-driven metrics.   Campaign ARNs are valid filterValues for the CAMPAIGN filter key.  
      */
     Filters: FiltersV2List;
     /**
-     * The grouping applied to the metrics that are returned. For example, when results are grouped by queue, the metrics returned are grouped by queue. The values that are returned apply to the metrics for each queue. They are not aggregated for all queues. If no grouping is specified, a summary of all metrics is returned. Valid grouping keys: AGENT | AGENT_HIERARCHY_LEVEL_ONE | AGENT_HIERARCHY_LEVEL_TWO | AGENT_HIERARCHY_LEVEL_THREE | AGENT_HIERARCHY_LEVEL_FOUR | AGENT_HIERARCHY_LEVEL_FIVE | CASE_TEMPLATE_ARN | CASE_STATUS | CHANNEL | contact/segmentAttributes/connect:Subtype | FLOWS_RESOURCE_ID | FLOWS_MODULE_RESOURCE_ID | FLOW_TYPE | FLOWS_OUTCOME_TYPE | INITIATION_METHOD | Q_CONNECT_ENABLED | QUEUE | RESOURCE_PUBLISHED_TIMESTAMP | ROUTING_PROFILE | ROUTING_STEP_EXPRESSION 
+     * The grouping applied to the metrics that are returned. For example, when results are grouped by queue, the metrics returned are grouped by queue. The values that are returned apply to the metrics for each queue. They are not aggregated for all queues. If no grouping is specified, a summary of all metrics is returned. Valid grouping keys: AGENT | AGENT_HIERARCHY_LEVEL_ONE | AGENT_HIERARCHY_LEVEL_TWO | AGENT_HIERARCHY_LEVEL_THREE | AGENT_HIERARCHY_LEVEL_FOUR | AGENT_HIERARCHY_LEVEL_FIVE | ANSWERING_MACHINE_DETECTION_STATUS | CAMPAIGN | CASE_TEMPLATE_ARN | CASE_STATUS | CHANNEL | contact/segmentAttributes/connect:Subtype | DISCONNECT_REASON | FLOWS_RESOURCE_ID | FLOWS_MODULE_RESOURCE_ID | FLOW_TYPE | FLOWS_OUTCOME_TYPE | INITIATION_METHOD | Q_CONNECT_ENABLED | QUEUE | RESOURCE_PUBLISHED_TIMESTAMP | ROUTING_PROFILE | ROUTING_STEP_EXPRESSION 
      */
     Groupings?: GroupingsV2;
     /**
-     * The metrics to retrieve. Specify the name, groupings, and filters for each metric. The following historical metrics are available. For a description of each metric, see Historical metrics definitions in the Amazon Connect Administrator Guide.  ABANDONMENT_RATE  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Abandonment rate   AGENT_ADHERENT_TIME  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy  UI name: Adherent time   AGENT_ANSWER_RATE  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent answer rate   AGENT_NON_ADHERENT_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Non-adherent time   AGENT_NON_RESPONSE  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy  UI name: Agent non-response   AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy Data for this metric is available starting from October 1, 2023 0:00:00 GMT. UI name: Agent non-response without customer abandons   AGENT_OCCUPANCY  Unit: Percentage Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy  UI name: Occupancy   AGENT_SCHEDULE_ADHERENCE  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Adherence   AGENT_SCHEDULED_TIME  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Scheduled time   AVG_ABANDON_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average queue abandon time   AVG_ACTIVE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Average active time   AVG_AFTER_CONTACT_WORK_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average after contact work time   Feature is a valid filter but not a valid grouping.   AVG_AGENT_CONNECTING_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD. For now, this metric only supports the following as INITIATION_METHOD: INBOUND | OUTBOUND | CALLBACK | API  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Average agent API connecting time   The Negate key in Metric Level Filters is not applicable for this metric.   AVG_AGENT_PAUSE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Average agent pause time   AVG_CASE_RELATED_CONTACTS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Average contacts per case   AVG_CASE_RESOLUTION_TIME  Unit: Seconds Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Average case resolution time   AVG_CONTACT_DURATION  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average contact duration   Feature is a valid filter but not a valid grouping.   AVG_CONVERSATION_DURATION  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average conversation duration   AVG_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Average flow time   AVG_GREETING_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent greeting time   AVG_HANDLE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, RoutingStepExpression UI name: Average handle time   Feature is a valid filter but not a valid grouping.   AVG_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer hold time   Feature is a valid filter but not a valid grouping.   AVG_HOLD_TIME_ALL_CONTACTS  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer hold time all contacts   AVG_HOLDS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average holds   Feature is a valid filter but not a valid grouping.   AVG_INTERACTION_AND_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interaction and customer hold time   AVG_INTERACTION_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interaction time   Feature is a valid filter but not a valid grouping.   AVG_INTERRUPTIONS_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interruptions   AVG_INTERRUPTION_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interruption time   AVG_NON_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average non-talk time   AVG_QUEUE_ANSWER_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average queue answer time   Feature is a valid filter but not a valid grouping.   AVG_RESOLUTION_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average resolution time   AVG_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average talk time   AVG_TALK_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent talk time   AVG_TALK_TIME_CUSTOMER  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer talk time   CASES_CREATED  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases created   CONTACTS_ABANDONED  Unit: Count Metric filter:    Valid values: API| Incoming | Outbound | Transfer | Callback | Queue_Transfer| Disconnect    Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect UI name: Contact abandoned   CONTACTS_ABANDONED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Contacts abandoned in X seconds   CONTACTS_ANSWERED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Contacts answered in X seconds   CONTACTS_CREATED  Unit: Count Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts created   Feature is a valid filter but not a valid grouping.   CONTACTS_HANDLED  Unit: Count Valid metric filter key: INITIATION_METHOD, DISCONNECT_REASON  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect UI name: API contacts handled   Feature is a valid filter but not a valid grouping.   CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT  Unit: Count Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts handled (connected to agent timestamp)   CONTACTS_HOLD_ABANDONS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts hold disconnect   CONTACTS_ON_HOLD_AGENT_DISCONNECT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts hold agent disconnect   CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts hold customer disconnect   CONTACTS_PUT_ON_HOLD  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts put on hold   CONTACTS_TRANSFERRED_OUT_EXTERNAL  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts transferred out external   CONTACTS_TRANSFERRED_OUT_INTERNAL  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts transferred out internal   CONTACTS_QUEUED  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts queued   CONTACTS_QUEUED_BY_ENQUEUE  Unit: Count Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype UI name: Contacts queued (enqueue timestamp)   CONTACTS_RESOLVED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than"). UI name: Contacts resolved in X   CONTACTS_TRANSFERRED_OUT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out   Feature is a valid filter but not a valid grouping.   CONTACTS_TRANSFERRED_OUT_BY_AGENT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out by agent   CONTACTS_TRANSFERRED_OUT_FROM_QUEUE  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out queue   CURRENT_CASES  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Current cases   FLOWS_OUTCOME  Unit: Count Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows outcome   FLOWS_STARTED  Unit: Count Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows started   MAX_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Maximum flow time   MAX_QUEUED_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Maximum queued time   MIN_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Minimum flow time   PERCENT_CASES_FIRST_CONTACT_RESOLVED  Unit: Percent Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases resolved on first contact   PERCENT_CONTACTS_STEP_EXPIRED  Unit: Percent Valid groupings and filters: Queue, RoutingStepExpression UI name: Not available   PERCENT_CONTACTS_STEP_JOINED  Unit: Percent Valid groupings and filters: Queue, RoutingStepExpression UI name: Not available   PERCENT_FLOWS_OUTCOME  Unit: Percent Valid metric filter key: FLOWS_OUTCOME_TYPE  Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows outcome percentage.  The FLOWS_OUTCOME_TYPE is not a valid grouping.   PERCENT_NON_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Non-talk time percent   PERCENT_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Talk time percent   PERCENT_TALK_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Agent talk time percent   PERCENT_TALK_TIME_CUSTOMER  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Customer talk time percent   REOPENED_CASE_ACTIONS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases reopened   RESOLVED_CASE_ACTIONS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases resolved   SERVICE_LEVEL  You can include up to 20 SERVICE_LEVEL metrics in a request. Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Service level X   STEP_CONTACTS_QUEUED  Unit: Count Valid groupings and filters: Queue, RoutingStepExpression UI name: Not available  SUM_AFTER_CONTACT_WORK_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: After contact work time   SUM_CONNECTING_TIME_AGENT  Unit: Seconds Valid metric filter key: INITIATION_METHOD. This metric only supports the following filter keys as INITIATION_METHOD: INBOUND | OUTBOUND | CALLBACK | API  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent API connecting time   The Negate key in Metric Level Filters is not applicable for this metric.   SUM_CONTACT_FLOW_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contact flow time   SUM_CONTACT_TIME_AGENT  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent on contact time   SUM_CONTACTS_DISCONNECTED   Valid metric filter key: DISCONNECT_REASON  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contact disconnected   SUM_ERROR_STATUS_TIME_AGENT  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Error status time   SUM_HANDLE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contact handle time   SUM_HOLD_TIME  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Customer hold time   SUM_IDLE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Agent idle time   SUM_INTERACTION_AND_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Agent interaction and hold time   SUM_INTERACTION_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent interaction time   SUM_NON_PRODUCTIVE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Non-Productive Time   SUM_ONLINE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Online time   SUM_RETRY_CALLBACK_ATTEMPTS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Callback attempts   
+     * The metrics to retrieve. Specify the name, groupings, and filters for each metric. The following historical metrics are available. For a description of each metric, see Historical metrics definitions in the Amazon Connect Administrator Guide.  ABANDONMENT_RATE  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Abandonment rate   AGENT_ADHERENT_TIME  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy  UI name: Adherent time   AGENT_ANSWER_RATE  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent answer rate   AGENT_NON_ADHERENT_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Non-adherent time   AGENT_NON_RESPONSE  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy  UI name: Agent non-response   AGENT_NON_RESPONSE_WITHOUT_CUSTOMER_ABANDONS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy Data for this metric is available starting from October 1, 2023 0:00:00 GMT. UI name: Agent non-response without customer abandons   AGENT_OCCUPANCY  Unit: Percentage Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy  UI name: Occupancy   AGENT_SCHEDULE_ADHERENCE  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Adherence   AGENT_SCHEDULED_TIME  This metric is available only in Amazon Web Services Regions where Forecasting, capacity planning, and scheduling is available. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Scheduled time   AVG_ABANDON_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average queue abandon time   AVG_ACTIVE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Average active time   AVG_AFTER_CONTACT_WORK_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average after contact work time   Feature is a valid filter but not a valid grouping.   AVG_AGENT_CONNECTING_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD. For now, this metric only supports the following as INITIATION_METHOD: INBOUND | OUTBOUND | CALLBACK | API  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Average agent API connecting time   The Negate key in Metric Level Filters is not applicable for this metric.   AVG_AGENT_PAUSE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Average agent pause time   AVG_CASE_RELATED_CONTACTS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Average contacts per case   AVG_CASE_RESOLUTION_TIME  Unit: Seconds Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Average case resolution time   AVG_CONTACT_DURATION  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average contact duration   Feature is a valid filter but not a valid grouping.   AVG_CONVERSATION_DURATION  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average conversation duration   AVG_DIALS_PER_MINUTE  This metric is available only for contacts analyzed by outbound campaigns analytics. Unit: Count Valid groupings and filters: Campaign, Agent, Queue, Routing Profile UI name: Average dials per minute   AVG_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Average flow time   AVG_GREETING_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent greeting time   AVG_HANDLE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, RoutingStepExpression UI name: Average handle time   Feature is a valid filter but not a valid grouping.   AVG_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer hold time   Feature is a valid filter but not a valid grouping.   AVG_HOLD_TIME_ALL_CONTACTS  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer hold time all contacts   AVG_HOLDS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average holds   Feature is a valid filter but not a valid grouping.   AVG_INTERACTION_AND_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interaction and customer hold time   AVG_INTERACTION_TIME  Unit: Seconds Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interaction time   Feature is a valid filter but not a valid grouping.   AVG_INTERRUPTIONS_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interruptions   AVG_INTERRUPTION_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent interruption time   AVG_NON_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average non-talk time   AVG_QUEUE_ANSWER_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average queue answer time   Feature is a valid filter but not a valid grouping.   AVG_RESOLUTION_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average resolution time   AVG_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average talk time   AVG_TALK_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average agent talk time   AVG_TALK_TIME_CUSTOMER  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Average customer talk time   AVG_WAIT_TIME_AFTER_CUSTOMER_CONNECTION  This metric is available only for contacts analyzed by outbound campaigns analytics. Unit: Seconds Valid groupings and filters: Campaign UI name: Average wait time after customer connection   CAMPAIGN_CONTACTS_ABANDONED_AFTER_X  This metric is available only for contacts analyzed by outbound campaigns analytics. Unit: Count Valid groupings and filters: Campaign, Agent  Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter GT (for Greater than). UI name: Campaign contacts abandoned after X   CAMPAIGN_CONTACTS_ABANDONED_AFTER_X_RATE  This metric is available only for contacts analyzed by outbound campaigns analytics. Unit: Percent Valid groupings and filters: Campaign, Agent  Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter GT (for Greater than). UI name: Campaign contacts abandoned after X rate   CASES_CREATED  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases created   CONTACTS_CREATED  Unit: Count Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Routing Profile, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts created   Feature is a valid filter but not a valid grouping.   CONTACTS_HANDLED  Unit: Count Valid metric filter key: INITIATION_METHOD, DISCONNECT_REASON  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect UI name: API contacts handled   Feature is a valid filter but not a valid grouping.   CONTACTS_HANDLED_BY_CONNECTED_TO_AGENT  Unit: Count Valid metric filter key: INITIATION_METHOD  Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts handled (connected to agent timestamp)   CONTACTS_HOLD_ABANDONS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts hold disconnect   CONTACTS_ON_HOLD_AGENT_DISCONNECT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts hold agent disconnect   CONTACTS_ON_HOLD_CUSTOMER_DISCONNECT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts hold customer disconnect   CONTACTS_PUT_ON_HOLD  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts put on hold   CONTACTS_TRANSFERRED_OUT_EXTERNAL  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts transferred out external   CONTACTS_TRANSFERRED_OUT_INTERNAL  Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contacts transferred out internal   CONTACTS_QUEUED  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts queued   CONTACTS_QUEUED_BY_ENQUEUE  Unit: Count Valid groupings and filters: Queue, Channel, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype UI name: Contacts queued (enqueue timestamp)   CONTACTS_REMOVED_FROM_QUEUE_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than"). UI name: Contacts removed from queue in X seconds   CONTACTS_RESOLVED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than"). UI name: Contacts resolved in X   CONTACTS_TRANSFERRED_OUT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Feature, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out   Feature is a valid filter but not a valid grouping.   CONTACTS_TRANSFERRED_OUT_BY_AGENT  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out by agent   CONTACTS_TRANSFERRED_OUT_FROM_QUEUE  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contacts transferred out queue   CURRENT_CASES  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Current cases   DELIVERY_ATTEMPTS  This metric is available only for contacts analyzed by outbound campaigns analytics. Unit: Count Valid metric filter key: ANSWERING_MACHINE_DETECTION_STATUS, DISCONNECT_REASON  Valid groupings and filters: Campaign, Agent, Queue, Routing Profile, Answering Machine Detection Status, Disconnect Reason UI name: Delivery attempts   DELIVERY_ATTEMPT_DISPOSITION_RATE  This metric is available only for contacts analyzed by outbound campaigns analytics, and with the answering machine detection enabled. Unit: Percent Valid metric filter key: ANSWERING_MACHINE_DETECTION_STATUS, DISCONNECT_REASON  Valid groupings and filters: Campaign, Agent, Answering Machine Detection Status, Disconnect Reason  Answering Machine Detection Status and Disconnect Reason are valid filters but not valid groupings.  UI name: Delivery attempt disposition rate   FLOWS_OUTCOME  Unit: Count Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows outcome   FLOWS_STARTED  Unit: Count Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows started   HUMAN_ANSWERED_CALLS  This metric is available only for contacts analyzed by outbound campaigns analytics, and with the answering machine detection enabled. Unit: Count Valid groupings and filters: Campaign, Agent UI name: Human answered   MAX_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Maximum flow time   MAX_QUEUED_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Maximum queued time   MIN_FLOW_TIME  Unit: Seconds Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Minimum flow time   PERCENT_CASES_FIRST_CONTACT_RESOLVED  Unit: Percent Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases resolved on first contact   PERCENT_CONTACTS_STEP_EXPIRED  Unit: Percent Valid groupings and filters: Queue, RoutingStepExpression UI name: This metric is available in Real-time Metrics UI but not on the Historical Metrics UI.  PERCENT_CONTACTS_STEP_JOINED  Unit: Percent Valid groupings and filters: Queue, RoutingStepExpression UI name: This metric is available in Real-time Metrics UI but not on the Historical Metrics UI.  PERCENT_FLOWS_OUTCOME  Unit: Percent Valid metric filter key: FLOWS_OUTCOME_TYPE  Valid groupings and filters: Channel, contact/segmentAttributes/connect:Subtype, Flow type, Flows module resource ID, Flows next resource ID, Flows next resource queue ID, Flows outcome type, Flows resource ID, Initiation method, Resource published timestamp UI name: Flows outcome percentage.  The FLOWS_OUTCOME_TYPE is not a valid grouping.   PERCENT_NON_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Non-talk time percent   PERCENT_TALK_TIME  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Talk time percent   PERCENT_TALK_TIME_AGENT  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Agent talk time percent   PERCENT_TALK_TIME_CUSTOMER  This metric is available only for contacts analyzed by Contact Lens conversational analytics. Unit: Percentage Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Customer talk time percent   REOPENED_CASE_ACTIONS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases reopened   RESOLVED_CASE_ACTIONS  Unit: Count Required filter key: CASE_TEMPLATE_ARN Valid groupings and filters: CASE_TEMPLATE_ARN, CASE_STATUS UI name: Cases resolved   SERVICE_LEVEL  You can include up to 20 SERVICE_LEVEL metrics in a request. Unit: Percent Valid groupings and filters: Queue, Channel, Routing Profile, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Service level X   STEP_CONTACTS_QUEUED  Unit: Count Valid groupings and filters: Queue, RoutingStepExpression UI name: This metric is available in Real-time Metrics UI but not on the Historical Metrics UI.  SUM_AFTER_CONTACT_WORK_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: After contact work time   SUM_CONNECTING_TIME_AGENT  Unit: Seconds Valid metric filter key: INITIATION_METHOD. This metric only supports the following filter keys as INITIATION_METHOD: INBOUND | OUTBOUND | CALLBACK | API  Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent API connecting time   The Negate key in Metric Level Filters is not applicable for this metric.   CONTACTS_ABANDONED  Unit: Count Metric filter:    Valid values: API| Incoming | Outbound | Transfer | Callback | Queue_Transfer| Disconnect    Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, RoutingStepExpression, Q in Connect UI name: Contact abandoned   SUM_CONTACTS_ABANDONED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Contacts abandoned in X seconds   SUM_CONTACTS_ANSWERED_IN_X  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect Threshold: For ThresholdValue, enter any whole number from 1 to 604800 (inclusive), in seconds. For Comparison, you must enter LT (for "Less than").  UI name: Contacts answered in X seconds   SUM_CONTACT_FLOW_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contact flow time   SUM_CONTACT_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Agent on contact time   SUM_CONTACTS_DISCONNECTED   Valid metric filter key: DISCONNECT_REASON  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Contact disconnected   SUM_ERROR_STATUS_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Error status time   SUM_HANDLE_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Contact handle time   SUM_HOLD_TIME  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Customer hold time   SUM_IDLE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Agent idle time   SUM_INTERACTION_AND_HOLD_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy, Q in Connect UI name: Agent interaction and hold time   SUM_INTERACTION_TIME  Unit: Seconds Valid groupings and filters: Queue, Channel, Routing Profile, Agent, Agent Hierarchy UI name: Agent interaction time   SUM_NON_PRODUCTIVE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Non-Productive Time   SUM_ONLINE_TIME_AGENT  Unit: Seconds Valid groupings and filters: Routing Profile, Agent, Agent Hierarchy UI name: Online time   SUM_RETRY_CALLBACK_ATTEMPTS  Unit: Count Valid groupings and filters: Queue, Channel, Routing Profile, contact/segmentAttributes/connect:Subtype, Q in Connect UI name: Callback attempts   
      */
     Metrics: MetricsV2;
     /**
@@ -6483,6 +6687,7 @@ declare namespace Connect {
      */
     AgentConfig?: AgentConfig;
   }
+  export type GlobalSignInEndpoint = string;
   export type Grouping = "QUEUE"|"CHANNEL"|"ROUTING_PROFILE"|"ROUTING_STEP_EXPRESSION"|string;
   export type GroupingV2 = string;
   export type Groupings = Grouping[];
@@ -6954,6 +7159,7 @@ declare namespace Connect {
   export type InstanceAttributeValue = string;
   export type InstanceId = string;
   export type InstanceIdOrArn = string;
+  export type InstanceReplicationStatus = "INSTANCE_REPLICATION_COMPLETE"|"INSTANCE_REPLICATION_IN_PROGRESS"|"INSTANCE_REPLICATION_FAILED"|"INSTANCE_REPLICA_DELETING"|"INSTANCE_REPLICATION_DELETION_FAILED"|"RESOURCE_REPLICATION_NOT_STARTED"|string;
   export type InstanceStatus = "CREATION_IN_PROGRESS"|"ACTIVE"|"CREATION_FAILED"|string;
   export interface InstanceStatusReason {
     /**
@@ -7089,6 +7295,8 @@ declare namespace Connect {
     Id?: TaskTemplateFieldIdentifier;
   }
   export type InvisibleTaskTemplateFields = InvisibleFieldInfo[];
+  export type IpCidr = string;
+  export type IpCidrList = IpCidr[];
   export type JoinToken = string;
   export type KeyId = string;
   export interface KinesisFirehoseConfig {
@@ -7225,6 +7433,30 @@ declare namespace Connect {
      */
     NextToken?: NextToken;
   }
+  export interface ListAuthenticationProfilesRequest {
+    /**
+     * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.
+     */
+    InstanceId: InstanceId;
+    /**
+     * The maximum number of results to return per page.
+     */
+    MaxResults?: MaxResult1000;
+    /**
+     * The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+     */
+    NextToken?: NextToken;
+  }
+  export interface ListAuthenticationProfilesResponse {
+    /**
+     * A summary of a given authentication profile.
+     */
+    AuthenticationProfileSummaryList?: AuthenticationProfileSummaryList;
+    /**
+     * If there are additional results, this is the token for the next set of results.
+     */
+    NextToken?: NextToken;
+  }
   export interface ListBotsRequest {
     /**
      * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.
@@ -7252,6 +7484,16 @@ declare namespace Connect {
      * If there are additional results, this is the token for the next set of results.
      */
     NextToken?: NextToken;
+  }
+  export interface ListCondition {
+    /**
+     * The type of target list that will be used to filter the users.
+     */
+    TargetListType?: TargetListType;
+    /**
+     * A list of Condition objects which would be applied together with an AND condition.
+     */
+    Conditions?: Conditions;
   }
   export interface ListContactEvaluationsRequest {
     /**
@@ -8414,6 +8656,12 @@ declare namespace Connect {
     NextToken?: ViewsNextToken;
   }
   export type Long = number;
+  export interface MatchCriteria {
+    /**
+     * An object to define agentIds.
+     */
+    AgentsCriteria?: AgentsCriteria;
+  }
   export type MaxResult10 = number;
   export type MaxResult100 = number;
   export type MaxResult1000 = number;
@@ -8623,6 +8871,27 @@ declare namespace Connect {
      * A list of user IDs.
      */
     UserIds?: UserIdList;
+  }
+  export type NullableProficiencyLevel = number;
+  export type NullableProficiencyLimitValue = number;
+  export type NumberComparisonType = "GREATER_OR_EQUAL"|"GREATER"|"LESSER_OR_EQUAL"|"LESSER"|"EQUAL"|"NOT_EQUAL"|"RANGE"|string;
+  export interface NumberCondition {
+    /**
+     * The name of the field in the number condition.
+     */
+    FieldName?: String;
+    /**
+     * The minValue to be used while evaluating the number condition.
+     */
+    MinValue?: NullableProficiencyLimitValue;
+    /**
+     * The maxValue to be used while evaluating the number condition.
+     */
+    MaxValue?: NullableProficiencyLimitValue;
+    /**
+     * The type of comparison to be made when evaluating the number condition.
+     */
+    ComparisonType?: NumberComparisonType;
   }
   export interface NumberReference {
     /**
@@ -9275,6 +9544,9 @@ declare namespace Connect {
     TranscriptItems?: RealTimeContactAnalysisTranscriptItemsWithCharacterOffsets;
   }
   export type RealTimeContactAnalysisPointsOfInterest = RealTimeContactAnalysisPointOfInterest[];
+  export type RealTimeContactAnalysisPostContactSummaryContent = string;
+  export type RealTimeContactAnalysisPostContactSummaryFailureCode = "QUOTA_EXCEEDED"|"INSUFFICIENT_CONVERSATION_CONTENT"|"FAILED_SAFETY_GUIDELINES"|"INVALID_ANALYSIS_CONFIGURATION"|"INTERNAL_ERROR"|string;
+  export type RealTimeContactAnalysisPostContactSummaryStatus = "FAILED"|"COMPLETED"|string;
   export interface RealTimeContactAnalysisSegmentAttachments {
     /**
      * The identifier of the segment.
@@ -9339,6 +9611,20 @@ declare namespace Connect {
      */
     IssuesDetected: RealTimeContactAnalysisIssuesDetected;
   }
+  export interface RealTimeContactAnalysisSegmentPostContactSummary {
+    /**
+     * The content of the summary.
+     */
+    Content?: RealTimeContactAnalysisPostContactSummaryContent;
+    /**
+     * Whether the summary was successfully COMPLETED or FAILED to be generated.
+     */
+    Status: RealTimeContactAnalysisPostContactSummaryStatus;
+    /**
+     * If the summary failed to be generated, one of the following failure codes occurs:    QUOTA_EXCEEDED: The number of concurrent analytics jobs reached your service quota.    INSUFFICIENT_CONVERSATION_CONTENT: The conversation needs to have at least one turn from both the participants in order to generate the summary.    FAILED_SAFETY_GUIDELINES: The generated summary cannot be provided because it failed to meet system safety guidelines.    INVALID_ANALYSIS_CONFIGURATION: This code occurs when, for example, you're using a language that isn't supported by generative AI-powered post-contact summaries.     INTERNAL_ERROR: Internal system error.  
+     */
+    FailureCode?: RealTimeContactAnalysisPostContactSummaryFailureCode;
+  }
   export interface RealTimeContactAnalysisSegmentTranscript {
     /**
      * The identifier of the transcript.
@@ -9377,7 +9663,7 @@ declare namespace Connect {
      */
     Sentiment?: RealTimeContactAnalysisSentimentLabel;
   }
-  export type RealTimeContactAnalysisSegmentType = "Transcript"|"Categories"|"Issues"|"Event"|"Attachments"|string;
+  export type RealTimeContactAnalysisSegmentType = "Transcript"|"Categories"|"Issues"|"Event"|"Attachments"|"PostContactSummary"|string;
   export type RealTimeContactAnalysisSegmentTypes = RealTimeContactAnalysisSegmentType[];
   export type RealTimeContactAnalysisSentimentLabel = "POSITIVE"|"NEGATIVE"|"NEUTRAL"|string;
   export type RealTimeContactAnalysisStatus = "IN_PROGRESS"|"FAILED"|"COMPLETED"|string;
@@ -9428,6 +9714,10 @@ declare namespace Connect {
      * The analyzed attachments.
      */
     Attachments?: RealTimeContactAnalysisSegmentAttachments;
+    /**
+     * Information about the post-contact summary.
+     */
+    PostContactSummary?: RealTimeContactAnalysisSegmentPostContactSummary;
   }
   export type RealtimeContactAnalysisSegments = RealtimeContactAnalysisSegment[];
   export interface Reference {
@@ -9473,6 +9763,7 @@ declare namespace Connect {
   export type ReferenceType = "URL"|"ATTACHMENT"|"NUMBER"|"STRING"|"DATE"|"EMAIL"|string;
   export type ReferenceTypes = ReferenceType[];
   export type ReferenceValue = string;
+  export type RefreshTokenDuration = number;
   export type RegionName = string;
   export type RehydrationType = "ENTIRE_PAST_SESSION"|"FROM_SEGMENT"|string;
   export interface ReleasePhoneNumberRequest {
@@ -9513,6 +9804,36 @@ declare namespace Connect {
      */
     Arn?: ARN;
   }
+  export interface ReplicationConfiguration {
+    /**
+     * A list of replication status summaries. The summaries contain details about the replication of configuration information for Amazon Connect resources, for each Amazon Web Services Region.
+     */
+    ReplicationStatusSummaryList?: ReplicationStatusSummaryList;
+    /**
+     * The Amazon Web Services Region where the source Amazon Connect instance was created. This is the Region where the ReplicateInstance API was called to start the replication process.
+     */
+    SourceRegion?: AwsRegion;
+    /**
+     * The URL that is used to sign-in to your Amazon Connect instance according to your traffic distribution group configuration. For more information about sign-in and traffic distribution groups, see Important things to know in the Create traffic distribution groups topic in the Amazon Connect Administrator Guide. 
+     */
+    GlobalSignInEndpoint?: GlobalSignInEndpoint;
+  }
+  export type ReplicationStatusReason = string;
+  export interface ReplicationStatusSummary {
+    /**
+     * The Amazon Web Services Region. This can be either the source or the replica Region, depending where it appears in the summary list.
+     */
+    Region?: AwsRegion;
+    /**
+     * The state of the replication.
+     */
+    ReplicationStatus?: InstanceReplicationStatus;
+    /**
+     * A description of the replication status. Use this information to resolve any issues that are preventing the successful replication of your Amazon Connect instance to another Region.
+     */
+    ReplicationStatusReason?: ReplicationStatusReason;
+  }
+  export type ReplicationStatusSummaryList = ReplicationStatusSummary[];
   export type RequestIdentifier = string;
   export interface RequiredFieldInfo {
     /**
@@ -9576,6 +9897,29 @@ declare namespace Connect {
      */
     Index?: Index;
   }
+  export interface RoutingCriteriaInput {
+    /**
+     * When Amazon Connect does not find an available agent meeting the requirements in a step for&#x2028; a given step duration, the routing criteria will move on to the next step sequentially until a&#x2028; join is completed with an agent. When all steps are exhausted, the contact will be offered to any agent in the queue.
+     */
+    Steps?: RoutingCriteriaInputSteps;
+  }
+  export interface RoutingCriteriaInputStep {
+    /**
+     * An object to specify the expiration of a routing step.
+     */
+    Expiry?: RoutingCriteriaInputStepExpiry;
+    /**
+     * A tagged union to specify expression for a routing step.
+     */
+    Expression?: Expression;
+  }
+  export interface RoutingCriteriaInputStepExpiry {
+    /**
+     * The number of seconds that the contact will be routed only to agents matching this routing&#x2028; step, if expiry was configured for this routing step.
+     */
+    DurationInSeconds?: DurationInSeconds;
+  }
+  export type RoutingCriteriaInputSteps = RoutingCriteriaInputStep[];
   export type RoutingCriteriaStepStatus = "ACTIVE"|"INACTIVE"|"JOINED"|"EXPIRED"|string;
   export type RoutingExpression = string;
   export type RoutingExpressions = RoutingExpression[];
@@ -9899,6 +10243,42 @@ declare namespace Connect {
     EncryptionConfig?: EncryptionConfig;
   }
   export type S3Uri = string;
+  export interface SearchAgentStatusesRequest {
+    /**
+     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+     */
+    InstanceId: InstanceId;
+    /**
+     * The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+     */
+    NextToken?: NextToken2500;
+    /**
+     * The maximum number of results to return per page.
+     */
+    MaxResults?: MaxResult100;
+    /**
+     * Filters to be applied to search results.
+     */
+    SearchFilter?: AgentStatusSearchFilter;
+    /**
+     * The search criteria to be used to return agent statuses.
+     */
+    SearchCriteria?: AgentStatusSearchCriteria;
+  }
+  export interface SearchAgentStatusesResponse {
+    /**
+     * The search criteria to be used to return agent statuses.
+     */
+    AgentStatuses?: AgentStatusList;
+    /**
+     * If there are additional results, this is the token for the next set of results.
+     */
+    NextToken?: NextToken2500;
+    /**
+     * The total number of agent statuses which matched your search query.
+     */
+    ApproximateTotalCount?: ApproximateTotalCount;
+  }
   export interface SearchAvailablePhoneNumbersRequest {
     /**
      * The Amazon Resource Name (ARN) for Amazon Connect instances or traffic distribution groups that phone number inbound traffic is routed through. You must enter InstanceId or TargetArn. 
@@ -9999,7 +10379,7 @@ declare namespace Connect {
   }
   export interface SearchContactFlowsResponse {
     /**
-     * Information about the contact flows.
+     * Information about the flows.
      */
     ContactFlows?: ContactFlowSearchSummaryList;
     /**
@@ -10093,7 +10473,7 @@ declare namespace Connect {
      */
     QueueIds?: QueueIdList;
     /**
-     * The search criteria based on user-defined contact attributes that have been configured for contact search. For more information, see Search by customer contact attributes in the Amazon Connect Administrator Guide.  To use SearchableContactAttributes in a search request, the GetContactAttributes action is required to perform an API request. For more information, see https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissionsActions defined by Amazon Connect. 
+     * The search criteria based on user-defined contact attributes that have been configured for contact search. For more information, see Search by custom contact attributes in the Amazon Connect Administrator Guide.  To use SearchableContactAttributes in a search request, the GetContactAttributes action is required to perform an API request. For more information, see https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissionsActions defined by Amazon Connect. 
      */
     SearchableContactAttributes?: SearchableContactAttributes;
   }
@@ -10279,7 +10659,7 @@ declare namespace Connect {
      */
     InstanceId: InstanceIdOrArn;
     /**
-     * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this API will search from all supported resource types.
+     * The list of resource types to be used to search tags from. If not provided or if any empty list is provided, this API will search from all supported resource types.  Supported resource types    AGENT   ROUTING_PROFILE   STANDARD_QUEUE   SECURITY_PROFILE   OPERATING_HOURS   PROMPT   CONTACT_FLOW   FLOW_MODULE  
      */
     ResourceTypes?: ResourceTypeList;
     /**
@@ -10379,6 +10759,42 @@ declare namespace Connect {
   }
   export type SearchText = string;
   export type SearchTextList = SearchText[];
+  export interface SearchUserHierarchyGroupsRequest {
+    /**
+     * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
+     */
+    InstanceId: InstanceId;
+    /**
+     * The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+     */
+    NextToken?: NextToken2500;
+    /**
+     * The maximum number of results to return per page.
+     */
+    MaxResults?: MaxResult100;
+    /**
+     * Filters to be applied to search results.
+     */
+    SearchFilter?: UserHierarchyGroupSearchFilter;
+    /**
+     * The search criteria to be used to return UserHierarchyGroups.
+     */
+    SearchCriteria?: UserHierarchyGroupSearchCriteria;
+  }
+  export interface SearchUserHierarchyGroupsResponse {
+    /**
+     * Information about the userHierarchyGroups.
+     */
+    UserHierarchyGroups?: UserHierarchyGroupList;
+    /**
+     * If there are additional results, this is the token for the next set of results.
+     */
+    NextToken?: NextToken2500;
+    /**
+     * The total number of userHierarchyGroups which matched your search query.
+     */
+    ApproximateTotalCount?: ApproximateTotalCount;
+  }
   export interface SearchUsersRequest {
     /**
      * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.  InstanceID is a required field. The "Required: No" below is incorrect. 
@@ -10730,7 +11146,7 @@ declare namespace Connect {
      */
     ClientToken?: ClientToken;
     /**
-     * The unique identifier of the Connect instance.
+     * The unique identifier of the Amazon Connect instance.
      */
     InstanceId: InstanceId;
     /**
@@ -11054,7 +11470,7 @@ declare namespace Connect {
      */
     ClientToken?: ClientToken;
     /**
-     * The identifier of the flow for the call. To see the ContactFlowId in the Amazon Connect admin website, on the navigation menu go to Routing, Contact Flows. Choose the flow. On the flow page, under the name of the flow, choose Show additional flow information. The ContactFlowId is the last part of the ARN, shown here in bold:  arn:aws:connect:us-west-2:xxxxxxxxxxxx:instance/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/contact-flow/846ec553-a005-41c0-8341-xxxxxxxxxxxx 
+     * The identifier of the flow for the call. To see the ContactFlowId in the Amazon Connect admin website, on the navigation menu go to Routing, Flows. Choose the flow. On the flow page, under the name of the flow, choose Show additional flow information. The ContactFlowId is the last part of the ARN, shown here in bold:  arn:aws:connect:us-west-2:xxxxxxxxxxxx:instance/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/contact-flow/846ec553-a005-41c0-8341-xxxxxxxxxxxx 
      */
     ContactFlowId: ContactFlowId;
     /**
@@ -11329,6 +11745,7 @@ declare namespace Connect {
   export type TagValue = string;
   export type TagValueString = string;
   export type TagsList = TagSet[];
+  export type TargetListType = "PROFICIENCIES"|string;
   export interface TaskActionDefinition {
     /**
      * The name. Supports variable injection. For more information, see JSONPath reference in the Amazon Connect Administrators Guide.
@@ -11466,7 +11883,7 @@ declare namespace Connect {
   export type ThresholdCollections = ThresholdV2[];
   export interface ThresholdV2 {
     /**
-     * The type of comparison. Only "less than" (LT) comparisons are supported.
+     * The type of comparison. Only "less than" (LT) and "greater than" (GT) comparisons are supported.
      */
     Comparison?: ResourceArnOrId;
     /**
@@ -11675,6 +12092,36 @@ declare namespace Connect {
      */
     ResetOrderNumber?: Boolean;
   }
+  export interface UpdateAuthenticationProfileRequest {
+    /**
+     * A unique identifier for the authentication profile. 
+     */
+    AuthenticationProfileId: AuthenticationProfileId;
+    /**
+     * The identifier of the Amazon Connect instance. You can find the instance ID in the Amazon Resource Name (ARN) of the instance.
+     */
+    InstanceId: InstanceId;
+    /**
+     * The name for the authentication profile.
+     */
+    Name?: AuthenticationProfileName;
+    /**
+     * The description for the authentication profile.
+     */
+    Description?: AuthenticationProfileDescription;
+    /**
+     * A list of IP address range strings that are allowed to access the instance. For more information on how to configure IP addresses, seeConfigure session timeouts in the Amazon Connect Administrator Guide.
+     */
+    AllowedIps?: IpCidrList;
+    /**
+     * A list of IP address range strings that are blocked from accessing the instance. For more information on how to configure IP addresses, For more information on how to configure IP addresses, see Configure IP-based access control in the Amazon Connect Administrator Guide. 
+     */
+    BlockedIps?: IpCidrList;
+    /**
+     * The short lived session duration configuration for users logged in to Amazon Connect, in minutes. This value determines the maximum possible time before an agent is authenticated. For more information, For more information on how to configure IP addresses, see Configure session timeouts in the Amazon Connect Administrator Guide. 
+     */
+    PeriodicSessionDuration?: AccessTokenDuration;
+  }
   export interface UpdateCaseActionDefinition {
     /**
      * An array of objects with Field ID and Value data.
@@ -11866,6 +12313,10 @@ declare namespace Connect {
      * Priority of the contact in the queue. The default priority for new contacts is 5. You can raise the priority of a contact compared to other contacts in the queue by assigning them a higher priority, such as 1 or 2.
      */
     QueuePriority?: QueuePriority;
+    /**
+     * Updates the routing criteria on the contact. These properties can be used to change how a&#x2028; contact is routed within the queue.
+     */
+    RoutingCriteria?: RoutingCriteriaInput;
   }
   export interface UpdateContactRoutingDataResponse {
   }
@@ -12765,6 +13216,28 @@ declare namespace Connect {
   }
   export type UserDataHierarchyGroups = HierarchyGroupId[];
   export type UserDataList = UserData[];
+  export type UserHierarchyGroupList = HierarchyGroup[];
+  export type UserHierarchyGroupSearchConditionList = UserHierarchyGroupSearchCriteria[];
+  export interface UserHierarchyGroupSearchCriteria {
+    /**
+     * A list of conditions which would be applied together with an OR condition.
+     */
+    OrConditions?: UserHierarchyGroupSearchConditionList;
+    /**
+     * A list of conditions which would be applied together with an AND condition.
+     */
+    AndConditions?: UserHierarchyGroupSearchConditionList;
+    /**
+     * A leaf node condition which can be used to specify a string condition.  The currently supported values for FieldName are name,&#x2028;&#x2028; parentId, levelId, and resourceID. 
+     */
+    StringCondition?: StringCondition;
+  }
+  export interface UserHierarchyGroupSearchFilter {
+    /**
+     * An object that can be used to specify Tag conditions inside the SearchFilter. This accepts an OR or AND (List of List) input where:   The top level list specifies conditions that need to be applied with OR operator.   The inner list specifies conditions that need to be applied with AND operator.  
+     */
+    AttributeFilter?: ControlPlaneAttributeFilter;
+  }
   export type UserId = string;
   export type UserIdList = UserId[];
   export interface UserIdentityInfo {
@@ -12877,6 +13350,10 @@ declare namespace Connect {
      * A leaf node condition which can be used to specify a string condition. The currently supported values for FieldName are Username, FirstName, LastName, RoutingProfileId, SecurityProfileId, ResourceId.
      */
     StringCondition?: StringCondition;
+    /**
+     * A leaf node condition which can be used to specify a List condition to search users with attributes included in Lists like Proficiencies.
+     */
+    ListCondition?: ListCondition;
     /**
      * A leaf node condition which can be used to specify a hierarchy group condition.
      */
@@ -13147,7 +13624,7 @@ declare namespace Connect {
   export type VocabularyContent = string;
   export type VocabularyFailureReason = string;
   export type VocabularyId = string;
-  export type VocabularyLanguageCode = "ar-AE"|"de-CH"|"de-DE"|"en-AB"|"en-AU"|"en-GB"|"en-IE"|"en-IN"|"en-US"|"en-WL"|"es-ES"|"es-US"|"fr-CA"|"fr-FR"|"hi-IN"|"it-IT"|"ja-JP"|"ko-KR"|"pt-BR"|"pt-PT"|"zh-CN"|"en-NZ"|"en-ZA"|string;
+  export type VocabularyLanguageCode = "ar-AE"|"de-CH"|"de-DE"|"en-AB"|"en-AU"|"en-GB"|"en-IE"|"en-IN"|"en-US"|"en-WL"|"es-ES"|"es-US"|"fr-CA"|"fr-FR"|"hi-IN"|"it-IT"|"ja-JP"|"ko-KR"|"pt-BR"|"pt-PT"|"zh-CN"|"en-NZ"|"en-ZA"|"ca-ES"|"da-DK"|"fi-FI"|"id-ID"|"ms-MY"|"nl-NL"|"no-NO"|"pl-PL"|"sv-SE"|"tl-PH"|string;
   export type VocabularyLastModifiedTime = Date;
   export type VocabularyName = string;
   export type VocabularyNextToken = string;

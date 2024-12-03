@@ -517,6 +517,25 @@ declare class OpenSearch extends Service {
   upgradeDomain(callback?: (err: AWSError, data: OpenSearch.Types.UpgradeDomainResponse) => void): Request<OpenSearch.Types.UpgradeDomainResponse, AWSError>;
 }
 declare namespace OpenSearch {
+  export interface AIMLOptionsInput {
+    /**
+     * Container for parameters required for natural language query generation on the specified domain.
+     */
+    NaturalLanguageQueryGenerationOptions?: NaturalLanguageQueryGenerationOptionsInput;
+  }
+  export interface AIMLOptionsOutput {
+    /**
+     * Container for parameters required for natural language query generation on the specified domain.
+     */
+    NaturalLanguageQueryGenerationOptions?: NaturalLanguageQueryGenerationOptionsOutput;
+  }
+  export interface AIMLOptionsStatus {
+    /**
+     * Machine learning options on the specified domain.
+     */
+    Options?: AIMLOptionsOutput;
+    Status?: OptionStatus;
+  }
   export type ARN = string;
   export type AWSAccount = string;
   export interface AWSDomainInformation {
@@ -628,6 +647,10 @@ declare namespace OpenSearch {
      */
     SAMLOptions?: SAMLOptionsOutput;
     /**
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service.
+     */
+    JWTOptions?: JWTOptionsOutput;
+    /**
      * Date and time when the migration period will be disabled. Only necessary when enabling fine-grained access control on an existing domain.
      */
     AnonymousAuthDisableDate?: DisableTimestamp;
@@ -653,6 +676,10 @@ declare namespace OpenSearch {
      * Container for information about the SAML configuration for OpenSearch Dashboards.
      */
     SAMLOptions?: SAMLOptionsInput;
+    /**
+     * Container for information about the JWT configuration of the Amazon OpenSearch Service. 
+     */
+    JWTOptions?: JWTOptionsInput;
     /**
      * True to enable a 30-day migration period during which administrators can create role mappings. Only necessary when enabling fine-grained access control on an existing domain.
      */
@@ -1197,6 +1224,10 @@ declare namespace OpenSearch {
      * Software update options for the domain.
      */
     SoftwareUpdateOptions?: SoftwareUpdateOptions;
+    /**
+     * Options for all machine learning features for the specified domain.
+     */
+    AIMLOptions?: AIMLOptionsInput;
   }
   export interface CreateDomainResponse {
     /**
@@ -1856,6 +1887,10 @@ declare namespace OpenSearch {
      * Information about the domain properties that are currently being modified.
      */
     ModifyingProperties?: ModifyingPropertiesList;
+    /**
+     * Container for parameters required to enable all machine learning features.
+     */
+    AIMLOptions?: AIMLOptionsStatus;
   }
   export interface DomainEndpointOptions {
     /**
@@ -2152,6 +2187,10 @@ declare namespace OpenSearch {
      * Information about the domain properties that are currently being modified.
      */
     ModifyingProperties?: ModifyingPropertiesList;
+    /**
+     * Container for parameters required to enable all machine learning features.
+     */
+    AIMLOptions?: AIMLOptionsOutput;
   }
   export type DomainStatusList = DomainStatus[];
   export type Double = number;
@@ -2324,7 +2363,7 @@ declare namespace OpenSearch {
      */
     Description?: DataSourceDescription;
     /**
-     * The status of the data source response.
+     * The status of the data source.
      */
     Status?: DataSourceStatus;
   }
@@ -2540,6 +2579,42 @@ declare namespace OpenSearch {
   export type IntegerClass = number;
   export type Issue = string;
   export type Issues = Issue[];
+  export interface JWTOptionsInput {
+    /**
+     * True to enable JWT authentication and authorization for a domain.
+     */
+    Enabled?: Boolean;
+    /**
+     * Element of the JWT assertion to use for the user name.
+     */
+    SubjectKey?: SubjectKey;
+    /**
+     * Element of the JWT assertion to use for roles.
+     */
+    RolesKey?: RolesKey;
+    /**
+     * Element of the JWT assertion used by the cluster to verify JWT signatures.
+     */
+    PublicKey?: String;
+  }
+  export interface JWTOptionsOutput {
+    /**
+     * True if JWT use is enabled.
+     */
+    Enabled?: Boolean;
+    /**
+     * The key used for matching the JWT subject attribute.
+     */
+    SubjectKey?: String;
+    /**
+     * The key used for matching the JWT roles attribute.
+     */
+    RolesKey?: String;
+    /**
+     * The key used to verify the signature of incoming JWT requests.
+     */
+    PublicKey?: String;
+  }
   export type KmsKeyId = string;
   export type LastUpdated = Date;
   export type LimitName = string;
@@ -2876,6 +2951,24 @@ declare namespace OpenSearch {
     ValueType?: PropertyValueType;
   }
   export type ModifyingPropertiesList = ModifyingProperties[];
+  export type NaturalLanguageQueryGenerationCurrentState = "NOT_ENABLED"|"ENABLE_COMPLETE"|"ENABLE_IN_PROGRESS"|"ENABLE_FAILED"|"DISABLE_COMPLETE"|"DISABLE_IN_PROGRESS"|"DISABLE_FAILED"|string;
+  export type NaturalLanguageQueryGenerationDesiredState = "ENABLED"|"DISABLED"|string;
+  export interface NaturalLanguageQueryGenerationOptionsInput {
+    /**
+     * The desired state of the natural language query generation feature. Valid values are ENABLED and DISABLED.
+     */
+    DesiredState?: NaturalLanguageQueryGenerationDesiredState;
+  }
+  export interface NaturalLanguageQueryGenerationOptionsOutput {
+    /**
+     * The desired state of the natural language query generation feature. Valid values are ENABLED and DISABLED.
+     */
+    DesiredState?: NaturalLanguageQueryGenerationDesiredState;
+    /**
+     * The current state of the natural language query generation feature, indicating completion, in progress, or failure.
+     */
+    CurrentState?: NaturalLanguageQueryGenerationCurrentState;
+  }
   export type NextToken = string;
   export type NodeId = string;
   export type NodeStatus = "Active"|"StandBy"|"NotAvailable"|string;
@@ -3276,6 +3369,7 @@ declare namespace OpenSearch {
   export interface RevokeVpcEndpointAccessResponse {
   }
   export type RoleArn = string;
+  export type RolesKey = string;
   export type RollbackOnDisable = "NO_ROLLBACK"|"DEFAULT_ROLLBACK"|string;
   export type S3BucketName = string;
   export interface S3GlueDataCatalog {
@@ -3553,6 +3647,7 @@ declare namespace OpenSearch {
   export type StorageTypeName = string;
   export type String = string;
   export type StringList = String[];
+  export type SubjectKey = string;
   export type TLSSecurityPolicy = "Policy-Min-TLS-1-0-2019-07"|"Policy-Min-TLS-1-2-2019-07"|"Policy-Min-TLS-1-2-PFS-2023-10"|string;
   export interface Tag {
     /**
@@ -3589,7 +3684,7 @@ declare namespace OpenSearch {
      */
     Description?: DataSourceDescription;
     /**
-     * The status of the data source update request.
+     * The status of the data source update.
      */
     Status?: DataSourceStatus;
   }
@@ -3676,6 +3771,10 @@ declare namespace OpenSearch {
      * Service software update options for the domain.
      */
     SoftwareUpdateOptions?: SoftwareUpdateOptions;
+    /**
+     * Options for all machine learning features for the specified domain.
+     */
+    AIMLOptions?: AIMLOptionsInput;
   }
   export interface UpdateDomainConfigResponse {
     /**
