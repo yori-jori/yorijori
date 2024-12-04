@@ -9,7 +9,7 @@ RUN npm install
 
 FROM node:22
 ENV NODE_ENV="production"
-COPY --from=builer /app /app
+COPY --from=builder /app /app
 WORKDIR /app
 ENV PORT 3000
 EXPOSE 3000
