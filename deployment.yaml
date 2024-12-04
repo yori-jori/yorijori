@@ -22,7 +22,7 @@ spec:
         image: limyeeun/yorijori:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
           name: yorijori
         env:
         - name: DB_HOST
