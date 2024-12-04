@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: yorijori
+        labels:
+                app: yorijori
+        spec: 
+                replicas: 3
+                strategy:
+                        type: Recreate
+                selector:
+                        matchLabels:
+                                app: yorijori
+                template:
+                        metadata:
+                                label:
+                                        app: yorijori
+                                        tier: yorijori
+                        spec:
+                                containers:
+                                        - name: yorijori
+                                          image: limyeeun/yorijori:latest
+                                          imagePullPolicy: Always
+                                          ports:
+                                                - containerPort: 5000
+                                                 name: yorijori
+---
+apiVersion: v1
+kind: Service
+metadata: 
+        name: yorijori
+        labels:
+                app: yorijori
+spec:
+        ports:
+                - port: 3000
+                  targetPort: 5000
+        selector:
+                app: yorijori
+                tier: yorijori
+        type: LoadBalancer
