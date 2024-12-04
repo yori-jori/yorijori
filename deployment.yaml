@@ -31,7 +31,7 @@ spec:
           value: "3306"
         - name: DB_USER
           value: "yorijori_team"
-        - name: DB_PASSWORD
+        - name: DB_PW
           value: "password!"
         - name: DB_NAME
           value: "yorijori_db2"
