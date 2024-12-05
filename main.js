@@ -1,7 +1,4 @@
-//test11
-//왜
-//안
-//될까?
+//test12
 const express = require("express"),
     app = express();
 layouts = require("express-ejs-layouts"),
