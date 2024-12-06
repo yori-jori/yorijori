@@ -16,9 +16,11 @@ multer = require('multer'),
 multerGoogleStorage = require('multer-google-storage'),
 cors = require('cors');
 
+//성공해서 자고 싶어요
+
 // core 오류 방지 설정
 app.use(cors({
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:3000',
     
 }));
     

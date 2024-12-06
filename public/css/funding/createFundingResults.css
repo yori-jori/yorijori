@@ -4,7 +4,7 @@ header {
 
 a {
     color: #12373A;
-    text-decoration: none; /* 링크 밑줄 없애기 */
+    text-decoration: none; /* 링크 밑줄 없애기 - 밑줄*/
 }
 
 #container{
