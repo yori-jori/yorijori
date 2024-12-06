@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yorijori
+  labels:
+    app: yorijori
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: yorijori
+  template:
+    metadata:
+      labels:
+        app: yorijori
+        tier: yorijori
+    spec:
+      containers:
+      - name: yorijori
+        image: hongyjin /yorijori:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          name: yorijori
+        env:
+        - name: DB_HOST
+          value: "34.47.90.10"   
+        - name: DB_PORT
+          value: "3306"
+        - name: DB_USER
+          value: "yorijori_team"
+        - name: DB_PW
+          value: "password!"
+        - name: DB_NAME
+          value: "yorijori_db2"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: yorijori
+  labels:
+    app: yorijori
+spec:
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: yorijori
+    tier: yorijori
+  type: LoadBalancer
