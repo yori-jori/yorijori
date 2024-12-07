@@ -44,7 +44,7 @@ const path = require('path');
 
 const uploadprofile = require('./config/multerProfileConfig');
 
-// `uploadprofile` 디렉토리가 존재하지 않으면 생성합니다.
+// `uploadprofile` 디렉토리가 존재하지 않으면 생성합
 const uploadDir = path.join(__dirname, 'uploadprofile');
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
