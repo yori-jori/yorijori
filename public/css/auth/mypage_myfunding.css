@@ -1,36 +1,37 @@
-header{
+header {
     z-index: 10000;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     position: relative;
+    padding: 15px; /* 오픈소스 프로젝트를 위해 컨테이너에 패딩을 추가함 */
 }
 
-.incontainer{
+.incontainer {
     display: flex;
     justify-content: center;
-    gap: 10px; /* 요소들 간의 간격을 54px로 설정 */
+    gap: 12px; /* 오픈소스 프로젝트를 위해 요소 간 간격을 10px에서 12px로 조정함 */
     margin-top: 30px;
 }
 
-.inincontainer{
+.inincontainer {
     margin-bottom: 100px;
 }
 
-.mypage-main{
+.mypage-main {
     font-size: 30px;
     font-weight: bold;
     font-family: 'Amatic SC';
-    margin-top: 43px !important; 
+    margin-top: 43px !important;
 }
 
-.menu-bar{
+.menu-bar {
     width: 183px;
 }
 
-.menu-bar-option{
+.menu-bar-option {
     font-size: 16px;
     font-weight: normal;
     font-family: 'Inter', sans-serif;
@@ -38,20 +39,20 @@ header{
     margin-top: 10px;
 }
 
-hr.custom-hr{
+hr.custom-hr {
     width: 183px;
     margin-top: 10px;
-    margin-left:0px;
+    margin-left: 0px;
 }
 
 .myprofile {
     width: 183px;
     height: 283px;
     border-radius: 10%;
-    border: 2px solid #ADBC9F; /* 테두리 두께, 스타일, 색상 */
+    border: 2px solid #E3CAA5;
     background-color: white;
     margin-top: 60px;
-    margin-bottom: 183px;
+    margin-bottom: 180px; /* 오픈소스 프로젝트를 위해 하단 여백을 약간 줄임 */
 }
 
 .profileimage img {
@@ -62,7 +63,7 @@ hr.custom-hr{
     margin-left: 22px;
 }
 
-.Nickname{
+.Nickname {
     margin-top: 14px;
     margin-left: 53px;
     font-size: 25px;
@@ -70,7 +71,7 @@ hr.custom-hr{
     font-weight: bold;
 }
 
-.buttonbox{
+.buttonbox {
     width: 80px;
     height: 19px;
     margin-top: 13px;
@@ -78,10 +79,10 @@ hr.custom-hr{
     background-color: white;
 }
 
-.mainbox{
+.mainbox {
     width: 700px;
     display: flex;
-    gap: 30px;
+    gap: 28px; /* 오픈소스 프로젝트를 위해 간격을 30px에서 28px로 약간 줄임 */
     flex-wrap: wrap;
     margin-left: 30px;
 }
@@ -90,31 +91,31 @@ hr.custom-hr{
     width: 200px;
     height: 260px;
     border-radius: 10%;
-    border: 1px solid black; /* 테두리 추가 */
+    border: 1px solid black;
     font-weight: normal;
     font-family: 'Acron';
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 5px; /* 텍스트와 하단 경계 사이에 여유 공간을 추가 */
-    text-align: center; /* 중앙 정렬 */
+    padding-bottom: 8px; /* 오픈소스 프로젝트를 위해 텍스트와 하단 경계 사이 간격을 5px에서 8px로 조정 */
+    text-align: center;
 }
 
 .mypost h2 {
-    margin: 0; /* 기본 여백 제거 */
-    text-align: center; /* 중앙 정렬 */
-    width: 100%; /* 부모 요소의 너비만큼 차지 */
-    margin-bottom: 10px; /* 아래쪽 여백 추가 */
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .mypost p {
     font-size: 13px;
-    text-align: left; /* 왼쪽 정렬 */
-    width: 100%; /* 부모 요소의 너비만큼 차지 */
-    margin: 0; /* 기본 여백 제거 */
-    padding-left: 10px; /* 왼쪽 여백 추가 */
-    margin-bottom: 5px; /* 아래쪽 여백 추가 */
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding-left: 10px;
+    margin-bottom: 5px;
     margin-top: 8px;
 }
 
@@ -131,7 +132,7 @@ hr.custom-hr{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 40% 투명도 검은색 배경 */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
 }
 
@@ -142,15 +143,14 @@ hr.custom-hr{
     left: 50%;
     width: 730px;
     height: 480px;
-    margin-top: -180px; /* 팝업 높이의 절반 */
-    margin-left: -365px; /* 팝업 너비의 절반 */
+    margin-top: -180px;
+    margin-left: -365px;
     background: white;
     border-radius: 10px;
     padding: 20px;
     z-index: 1001;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-
 
 .popup h2 {
     margin-top: 0;
@@ -181,30 +181,18 @@ hr.custom-hr{
     margin-right: 10px;
 }
 
-/* #popupButton{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    width: 85px;
-    height: 35px;
-} */
-
-.sr-only{
-
-}
-
-.profileimage2{
+.profileimage2 {
     margin-top: 30px;
     margin-left: 290px;
     width: 138px;
     height: 138px;
     border-radius: 100px;
-    background-color: aquamarine;
+    background-color: #E3CAA5;
     margin-bottom: 30px;
 }
 
 .profileimage2 img {
-    width: 100%; /* 이미지를 부모 요소의 너비에 맞게 조정 */
-    height: auto; 
-    border-radius: 100px; 
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
 }
