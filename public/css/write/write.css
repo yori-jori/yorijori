@@ -38,7 +38,11 @@
   width: 130px;
 }
 select{
-  margin-left:20px;
+  margin-left:235px;
+  height: 35px;
+  text-align: center;
+  border: 0;
+  outline: none;
 }
 /* 
 게시물 작성 메인 */
@@ -112,9 +116,6 @@ header,footer {
 }
 .note-placeholder {
   font-size: 15px;
-}
-select{
-  height: 35px;
 }
 option{
   font-size: 15px;

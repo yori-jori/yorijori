@@ -1,13 +1,13 @@
-
 #container-box {
     display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     margin: 0;
     padding-top: 150px;
 }
@@ -17,31 +17,32 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* 파일 경로: public/styles.css */
+
 .category-bar {
     margin-top: 30px;
-    text-align: center; /* 부모 요소에서 자식 요소들을 가운데 정렬 */
+    text-align: center;
 }
 
 .category-bar button {
     padding: 15px 20px;
     cursor: pointer;
-    display: inline-block; /* inline-block으로 변경해서 내용에 따라 너비가 조정되도록 함 */
-    margin: 5px; /* 버튼 간격을 유지하기 위해 여백 추가 */
+    display: inline-block;
+    margin: 5px;
     border-radius: 5px;
+    background-color: #e3e3e3;
+    color: #333;
 }
 
 .category-bar button:hover {
-    background-color: #FFFBE9;
+    background-color: #fff8e5;
     font-weight: bold;
 }
 
-
 .category-bar button:active {
-    background-color: #E3CAA5;
+    background-color: #e3caa5;
     font-weight: bold;
 }
 
@@ -51,39 +52,42 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    overflow-x: auto; 
+    overflow-x: auto;
     gap: 13px;
-    padding-bottom: 10px; /* 스크롤바가 덮이지 않도록 패딩 추가 */
-    scroll-behavior: smooth; /* 스크롤 시 부드럽게 이동 */
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
 }
 
 .subcategory-bar button {
     padding: 10px 20px;
     cursor: pointer;
-    display: inline-block; /* inline-block으로 변경해서 내용에 따라 너비가 조정되도록 함 */
-    margin: 5px; /* 버튼 간격을 유지하기 위해 여백 추가 */
+    display: inline-block;
+    margin: 5px;
     border-radius: 5px;
+    background-color: #e3e3e3;
+    color: #333;
 }
 
 .subcategory-bar button:hover {
-    background-color: #FFFBE9;
+    background-color: #fff8e5;
     font-weight: bold;
 }
 
-/* 버튼이 활성화된 상태(현재 선택된 카테고리)를 표시하는 스타일 */
-.subcategory-bar button:active {
-    background-color: #E3CAA5 !important;
-    font-weight: bold !important;
-    color: black;
+sub-category-bar button:active {
+    background-color: #e3caa5;
+    font-weight: bold;
+    color: #000;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin: 10px 0 5px; /* 제목과 내용 사이 간격 조절 */
+    margin: 10px 0 5px;
+    color: #444;
 }
 
 p {
-    font-size: 0.9rem;
-    opacity: 0.7;
-    margin-bottom: 0; /* 마지막 마진 제거 */
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 0;
+    color: #555;
 }
